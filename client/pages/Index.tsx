@@ -20,10 +20,10 @@ export default function Index() {
               product outcomes.
             </p>
             <div className="mt-6 flex gap-3">
-              <a className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-primary-foreground font-medium shadow hover:opacity-90" href="#contact">
+              <a className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-primary-foreground font-medium shadow hover:opacity-90" href="/contact">
                 Contact Us
               </a>
-              <a className="inline-flex items-center rounded-md border px-4 py-2 font-medium hover:bg-accent" href="#expertise">
+              <a className="inline-flex items-center rounded-md border px-4 py-2 font-medium hover:bg-accent" href="/capabilities">
                 Explore Expertise
               </a>
             </div>
