@@ -57,13 +57,16 @@ export default function Index() {
       {/* Domains */}
       <Section className="bg-secondary/30">
         <h2 className="text-2xl font-bold">Domains</h2>
-        <div className="mt-6 flex flex-wrap gap-2">
-          <Pill icon={<Wifi className="h-4 w-4" />}>IoT</Pill>
-          <Pill icon={<Stethoscope className="h-4 w-4" />}>Medical</Pill>
-          <Pill icon={<Car className="h-4 w-4" />}>Automotive</Pill>
-          <Pill icon={<Cpu className="h-4 w-4" />}>SoC</Pill>
-          <Pill icon={<CircuitBoard className="h-4 w-4" />}>Hardware</Pill>
-          <Pill icon={<Wrench className="h-4 w-4" />}>Testing</Pill>
+        <p className="mt-2 text-muted-foreground max-w-2xl">
+          Where we deliver the most impact across industries and technologies.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <LinkCard href="/capabilities#iot" title="IoT" desc="Device firmware, gateways, cloud integration" icon={<Wifi className="h-5 w-5" />} />
+          <LinkCard href="/capabilities#medical" title="Medical" desc="Regulated devices, sensors, connectivity" icon={<Stethoscope className="h-5 w-5" />} />
+          <LinkCard href="/capabilities#automotive" title="Automotive" desc="BSP, telematics, CAN/UDS/J1939" icon={<Car className="h-5 w-5" />} />
+          <LinkCard href="/capabilities#soc" title="SoC" desc="BSP, bootloaders, silicon validation" icon={<Cpu className="h-5 w-5" />} />
+          <LinkCard href="/capabilities#hardware" title="Hardware" desc="Schematics, layout, bring‑up" icon={<CircuitBoard className="h-5 w-5" />} />
+          <LinkCard href="/capabilities#testing" title="Testing" desc="Automation, stability, verification" icon={<Wrench className="h-5 w-5" />} />
         </div>
       </Section>
 
