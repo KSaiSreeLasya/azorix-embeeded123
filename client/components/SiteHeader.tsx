@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import BackButton from "@/components/BackButton";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -12,22 +14,28 @@ const nav = [
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="grid place-items-center h-9 w-9 rounded-md bg-primary text-primary-foreground font-bold">
-            E
-          </div>
-          <div className="leading-tight">
-            <div className="text-lg font-extrabold tracking-tight">
-              Embinsys
+        <div className="flex items-center gap-3">
+          {location.pathname !== "/" && (
+            <BackButton className="hidden sm:inline-flex" />
+          )}
+          <Link to="/" className="flex items-center gap-3">
+            <div className="grid place-items-center h-9 w-9 rounded-md bg-primary text-primary-foreground font-bold">
+              E
             </div>
-            <div className="text-xs text-muted-foreground -mt-1">
-              Engineering & Design Services
+            <div className="leading-tight">
+              <div className="text-lg font-extrabold tracking-tight">
+                Embinsys
+              </div>
+              <div className="text-xs text-muted-foreground -mt-1">
+                Engineering & Design Services
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
         <nav className="hidden md:flex items-center gap-6">
           {nav.map((n) => (
             <NavLink
@@ -45,6 +53,8 @@ export default function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
+          {location.pathname !== "/" && <BackButton className="sm:hidden" />}
+          <ThemeToggle />
           <Button asChild className="hidden md:inline-flex">
             <a href="mailto:info@embinsys.com">Get in touch</a>
           </Button>
@@ -53,7 +63,6 @@ export default function SiteHeader() {
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="i-heroicons-bars-3" />
             <svg
               className="h-5 w-5"
               viewBox="0 0 24 24"
