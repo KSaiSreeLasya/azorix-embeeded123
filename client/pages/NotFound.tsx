@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
