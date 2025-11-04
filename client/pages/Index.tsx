@@ -2,6 +2,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Award,
   Cpu,
@@ -77,19 +78,19 @@ export default function Index() {
       <Section>
         <div className="grid gap-6 md:grid-cols-3">
           <LinkCard
-            href="/capabilities"
+            to="/capabilities"
             title="Capabilities"
             desc="End‑to‑end product engineering across hardware, software, and test."
             icon={<Layers className="h-5 w-5" />}
           />
           <LinkCard
-            href="/projects"
+            to="/projects"
             title="Projects"
             desc="Selected work across medical, industrial, consumer and automotive."
             icon={<Award className="h-5 w-5" />}
           />
           <LinkCard
-            href="/contact"
+            to="/contact"
             title="Contact"
             desc="Talk to our team about your product or resource needs."
             icon={<Wrench className="h-5 w-5" />}
@@ -105,37 +106,37 @@ export default function Index() {
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <LinkCard
-            href="/capabilities#iot"
+            to="/domains/iot"
             title="IoT"
             desc="Device firmware, gateways, cloud integration"
             icon={<Wifi className="h-5 w-5" />}
           />
           <LinkCard
-            href="/capabilities#medical"
+            to="/domains/medical"
             title="Medical"
             desc="Regulated devices, sensors, connectivity"
             icon={<Stethoscope className="h-5 w-5" />}
           />
           <LinkCard
-            href="/capabilities#automotive"
+            to="/domains/automotive"
             title="Automotive"
             desc="BSP, telematics, CAN/UDS/J1939"
             icon={<Car className="h-5 w-5" />}
           />
           <LinkCard
-            href="/capabilities#soc"
+            to="/domains/soc"
             title="SoC"
             desc="BSP, bootloaders, silicon validation"
             icon={<Cpu className="h-5 w-5" />}
           />
           <LinkCard
-            href="/capabilities#hardware"
+            to="/domains/hardware"
             title="Hardware"
             desc="Schematics, layout, bring‑up"
             icon={<CircuitBoard className="h-5 w-5" />}
           />
           <LinkCard
-            href="/capabilities#testing"
+            to="/domains/testing"
             title="Testing"
             desc="Automation, stability, verification"
             icon={<Wrench className="h-5 w-5" />}
@@ -198,30 +199,31 @@ function FeatureCard({
 }
 
 function LinkCard({
-  href,
+  to,
   title,
   desc,
   icon,
 }: {
-  href: string;
+  to: string;
   title: string;
   desc: string;
   icon: React.ReactNode;
 }) {
   return (
-    <a
-      href={href}
-      className="group rounded-xl border p-6 transition-colors hover:bg-accent/40"
+    <Link
+      to={to}
+      className="group rounded-xl border p-6 transition-all hover:bg-accent/40 hover:shadow-md hover:-translate-y-0.5"
     >
       <div className="flex items-center gap-2 font-semibold">
         {icon}
         {title}
       </div>
       <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-      <div className="mt-3 text-sm font-medium text-primary group-hover:underline">
-        Learn more →
+      <div className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary">
+        <span className="group-hover:underline">Learn more</span>
+        <span aria-hidden>→</span>
       </div>
-    </a>
+    </Link>
   );
 }
 
