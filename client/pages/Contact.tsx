@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -37,7 +38,14 @@ export default function Contact() {
           Tell us about your project or resource needs. Our leadership team will
           respond promptly.
         </p>
-        <form onSubmit={onSubmit} className="mt-8 grid gap-4 max-w-xl">
+        <motion.form
+          onSubmit={onSubmit}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 grid gap-4 max-w-xl"
+        >
           <div>
             <label className="text-sm font-medium">Name</label>
             <input
@@ -66,8 +74,14 @@ export default function Contact() {
           <Button type="submit" className="w-fit">
             Send message
           </Button>
-        </form>
-        <div className="mt-10 grid gap-6 md:grid-cols-3 text-sm text-muted-foreground">
+        </motion.form>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-10 grid gap-6 md:grid-cols-3 text-sm text-muted-foreground"
+        >
           <div>
             <div className="font-medium text-foreground">Offices</div>
             <div>Troy, MI, USA</div>
@@ -90,7 +104,7 @@ export default function Contact() {
               info@embinsys.com
             </a>
           </div>
-        </div>
+        </motion.div>
       </Section>
       <SiteFooter />
     </div>
