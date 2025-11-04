@@ -5,26 +5,45 @@ import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { supabase } from "@/lib/supabase";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !message) {
       toast.error("Please fill out all fields");
       return;
     }
-    const mailto = `mailto:info@embinsys.com?subject=Inquiry from ${encodeURIComponent(
-      name,
-    )}&body=${encodeURIComponent(message + "\n\nFrom: " + email)}`;
-    window.location.href = mailto;
-    toast.success("Thank you! We’ll get back to you shortly.");
-    setName("");
-    setEmail("");
-    setMessage("");
+
+    setIsLoading(true);
+    try {
+      const { error } = await supabase.from("contact_submissions").insert({
+        name,
+        email,
+        message,
+      });
+
+      if (error) {
+        console.error("Supabase error:", error);
+        toast.error("Failed to submit form. Please try again.");
+        return;
+      }
+
+      toast.success("Thank you! We'll get back to you shortly.");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An error occurred while submitting the form");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -52,6 +71,7 @@ export default function Contact() {
               className="mt-1 w-full rounded-md border bg-background px-3 py-2"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              disabled={isLoading}
             />
           </div>
           <div>
@@ -61,6 +81,7 @@ export default function Contact() {
               className="mt-1 w-full rounded-md border bg-background px-3 py-2"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              disabled={isLoading}
             />
           </div>
           <div>
@@ -69,10 +90,11 @@ export default function Contact() {
               className="mt-1 min-h-32 w-full rounded-md border bg-background px-3 py-2"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              disabled={isLoading}
             />
           </div>
-          <Button type="submit" className="w-fit">
-            Send message
+          <Button type="submit" className="w-fit" disabled={isLoading}>
+            {isLoading ? "Sending..." : "Send message"}
           </Button>
         </motion.form>
         <motion.div
