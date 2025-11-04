@@ -6,8 +6,7 @@ export default function BackButton({ className }: { className?: string }) {
   const navigate = useNavigate();
   const location = useLocation();
   const handleBack = () => {
-    if (window.history.length > 1) navigate(-1);
-    else navigate("/");
+    navigate("/");
   };
 
   return (
