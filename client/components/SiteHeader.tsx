@@ -49,6 +49,7 @@ export default function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
+          <BackButton className="sm:hidden" />
           <Button asChild className="hidden md:inline-flex">
             <a href="mailto:info@embinsys.com">Get in touch</a>
           </Button>
@@ -57,7 +58,6 @@ export default function SiteHeader() {
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="i-heroicons-bars-3" />
             <svg
               className="h-5 w-5"
               viewBox="0 0 24 24"
