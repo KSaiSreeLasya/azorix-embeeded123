@@ -34,7 +34,7 @@ export default function Index() {
               <p className="text-sm font-semibold text-primary">
                 Engineering & Design Services
               </p>
-              <h1 className="mt-2 text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(16,185,129,0.15)]">
+              <h1 className="mt-2 pb-[20px] text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(16,185,129,0.15)]">
                 Innovation. Quality. Reliability.
               </h1>
               <p className="mt-4 text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed">
