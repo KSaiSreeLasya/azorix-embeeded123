@@ -35,15 +35,16 @@ export default function SiteHeader() {
             </div>
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-2">
           {nav.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-foreground/80",
-                  isActive ? "text-foreground" : "text-foreground/60",
+                  "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                  "hover:bg-primary/10 hover:text-foreground/90",
+                  isActive ? "bg-primary/15 text-foreground" : "text-foreground/70",
                 )
               }
             >
@@ -58,7 +59,7 @@ export default function SiteHeader() {
             <a href="mailto:info@azorixembeeded.com">Get in touch</a>
           </Button>
           <button
-            className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border"
+            className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border hover:bg-primary/10"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
           >
