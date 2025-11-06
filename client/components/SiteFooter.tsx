@@ -1,7 +1,7 @@
 export default function SiteFooter() {
   return (
     <footer className="border-t bg-secondary/40">
-      <div className="container py-10 grid gap-6 md:grid-cols-3">
+      <div className="container py-12 grid gap-6 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img
@@ -11,7 +11,7 @@ export default function SiteFooter() {
             />
             <div className="text-xl font-bold">Azorix Embeeded</div>
           </div>
-          <p className="text-sm text-muted-foreground mt-2 max-w-xs">
+          <p className="text-sm text-muted-foreground mt-2 max-w-sm">
             Innovation. Quality. Reliability. Partnering with clients to deliver
             end‑to‑end embedded engineering solutions.
           </p>
@@ -31,7 +31,7 @@ export default function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t py-4 text-center text-xs text-muted-foreground">
+      <div className="border-t py-4 text-center text-xs text-muted-foreground bg-gradient-to-r from-transparent via-primary/10 to-transparent">
         © 2024 Azorix Embeeded. All rights reserved.
       </div>
     </footer>
