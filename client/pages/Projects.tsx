@@ -36,7 +36,7 @@ export default function Projects() {
               width="900"
               height="600"
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
             />
           </div>
