@@ -36,10 +36,14 @@ export default function SiteFooter() {
           <div className="font-semibold mb-3">Legal</div>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link to="/privacy" className="underline text-muted-foreground">Privacy Policy</Link>
+              <Link to="/privacy" className="underline text-muted-foreground">
+                Privacy Policy
+              </Link>
             </li>
             <li>
-              <Link to="/terms" className="underline text-muted-foreground">Terms of Service</Link>
+              <Link to="/terms" className="underline text-muted-foreground">
+                Terms of Service
+              </Link>
             </li>
           </ul>
         </div>

@@ -116,7 +116,10 @@ function Proj({ title, points }: { title: string; points: string[] }) {
       <div className="font-semibold mb-2 text-foreground">{title}</div>
       <ul className="list-none pl-0 space-y-1">
         {points.map((p) => (
-          <li key={p} className="flex items-start gap-2 text-sm text-muted-foreground">
+          <li
+            key={p}
+            className="flex items-start gap-2 text-sm text-muted-foreground"
+          >
             <CheckCircle className="h-4 w-4 text-primary mt-0.5" />
             <span>{p}</span>
           </li>
