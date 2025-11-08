@@ -8,15 +8,15 @@ export default function SiteFooter() {
           <div className="flex items-center gap-3 mb-4">
             <span className="relative inline-flex">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F07ba826074254d3191a55ee32e800a58%2F7d0ce5b5bd9f4847a9b0b9add5682e46?format=png&width=128"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fdf131029371243a6bdd4cd7752a9db95%2Ffc1a3beb099e46de8f378d4b0799fbed?format=webp&width=800"
                 alt="Azorix Embeeded Logo"
-                className="h-10 w-10 object-contain dark:hidden brightness-0"
+                className="h-12 w-12 object-contain dark:hidden"
               />
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F07ba826074254d3191a55ee32e800a58%2F7d0ce5b5bd9f4847a9b0b9add5682e46?format=png&width=128"
-                alt=""
+                src="https://cdn.builder.io/api/v1/image/assets%2Fdf131029371243a6bdd4cd7752a9db95%2Ffb96ec0fa67245f1ba7adbbb9bd83bbf?format=webp&width=800"
+                alt="Azorix Embeeded Logo White"
                 aria-hidden
-                className="h-10 w-10 object-contain hidden dark:inline-block brightness-0 invert"
+                className="h-12 w-12 object-contain hidden dark:inline-block"
               />
             </span>
             <div className="text-xl font-bold">Azorix Embeeded</div>
