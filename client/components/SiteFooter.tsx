@@ -19,7 +19,7 @@ export default function SiteFooter() {
                 className="h-10 w-auto object-contain hidden dark:inline-block"
               />
             </span>
-            <div className="text-xl font-bold">Azorix Embedded</div>
+            <div className="text-xl font-bold"></div>
           </div>
           <p className="text-sm text-muted-foreground mt-2 max-w-sm">
             Innovation. Quality. Reliability. Partnering with clients to deliver
