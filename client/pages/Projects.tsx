@@ -145,7 +145,7 @@ const projects = [
     category: "Automotive & Industrial",
     title: "Commercial RO",
     image: "https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg",
-    icon: <Cpu as CpuIcon className="h-5 w-5" />,
+    icon: <Cpu className="h-5 w-5" />,
     shortDesc: "Reverse osmosis system with IoT monitoring",
     fullDesc: "An industrial-grade water treatment system with comprehensive IoT connectivity. Monitors water quality parameters, tracks consumption, and enables remote diagnostics and control via GSM/GPS/WiFi.",
     details: [
