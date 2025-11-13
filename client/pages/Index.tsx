@@ -217,55 +217,65 @@ export default function Index() {
 
       {/* Expertise Capabilities */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">
-          Expertise In-Depth
-        </h2>
-        <p className="text-foreground/80 max-w-3xl leading-relaxed mb-8">
-          Comprehensive capabilities across four pillars of embedded engineering.
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+            Four Pillars of Expertise
+          </h2>
+          <p className="text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Complete end-to-end engineering solutions from hardware to deployment
+          </p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <ExpertiseCard
+            icon="🛠️"
             title="Product"
+            subtitle="Hardware Design"
+            desc="We design the physical hardware - circuits, PCBs, and all components that make devices work"
             items={[
               "Requirements analysis",
               "System design & review",
-              "Schematic design & review",
-              "PCB layout and review",
-              "BOM analysis and cleansing",
-              "Project planning and management",
+              "Schematic & PCB design",
+              "Component selection",
+              "Quality assurance",
             ]}
           />
           <ExpertiseCard
+            icon="💻"
             title="Software"
+            subtitle="Device Intelligence"
+            desc="We write the code that makes devices smart - from firmware to apps"
             items={[
-              "Board bring-up, bootloader, BSP",
-              "RTOS – Linux, QNX, VxWorks, Android",
-              "CAN, UDS, CAN FD, J1939, Autosar",
-              "Protocol stacks, RF, Network",
-              "Multimedia and applications",
-              "Debugging and build/CI-CD",
+              "Bootloaders and drivers",
+              "Operating systems",
+              "Communication protocols",
+              "User interfaces",
+              "Cloud integration",
             ]}
           />
           <ExpertiseCard
+            icon="✓"
             title="Testing"
+            subtitle="Quality Verification"
+            desc="We make sure everything works perfectly - testing and quality assurance"
             items={[
-              "Test framework development",
-              "Test automation",
-              "Test case creation and execution",
-              "Test failure analysis",
-              "Black box testing",
-              "Functional, stability, verification",
+              "Automated testing",
+              "Stability testing",
+              "Performance validation",
+              "Reliability testing",
+              "Compliance verification",
             ]}
           />
           <ExpertiseCard
+            icon="🤝"
             title="Support"
+            subtitle="Expert Guidance"
+            desc="We're here to help - training, resources, and ongoing support"
             items={[
-              "In-house lab for embedded",
-              "Resource augmentation",
-              "ODC/Statement of work",
-              "Successful execution model",
-              "Strong leadership",
-              "Hands-on training in labs",
+              "Team augmentation",
+              "Technical training",
+              "Troubleshooting",
+              "Escalation support",
+              "Knowledge transfer",
             ]}
           />
         </div>
