@@ -711,19 +711,6 @@ function IoTAppCard({
   );
 }
 
-function ClientLogo({ name }: { name: string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border bg-card/40 backdrop-blur p-6 flex items-center justify-center h-24"
-    >
-      <span className="font-semibold text-foreground/60 text-center">{name}</span>
-    </motion.div>
-  );
-}
 
 function Pill({
   children,
