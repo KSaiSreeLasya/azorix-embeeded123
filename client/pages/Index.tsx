@@ -537,10 +537,16 @@ function CoECard({
 }
 
 function ExpertiseCard({
+  icon,
   title,
+  subtitle,
+  desc,
   items,
 }: {
+  icon: string;
   title: string;
+  subtitle: string;
+  desc: string;
   items: string[];
 }) {
   return (
@@ -548,15 +554,18 @@ function ExpertiseCard({
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -2 }}
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.4 }}
       className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
     >
-      <h3 className="font-bold text-lg mb-4">{title}</h3>
-      <ul className="space-y-2">
+      <div className="text-4xl mb-2">{icon}</div>
+      <h3 className="font-bold text-lg">{title}</h3>
+      <p className="text-xs font-medium text-primary/70 mb-3">{subtitle}</p>
+      <p className="text-xs text-muted-foreground mb-4">{desc}</p>
+      <ul className="space-y-1.5">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm">
-            <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+          <li key={item} className="flex items-start gap-2 text-xs">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1 flex-shrink-0" />
             <span className="text-muted-foreground">{item}</span>
           </li>
         ))}
