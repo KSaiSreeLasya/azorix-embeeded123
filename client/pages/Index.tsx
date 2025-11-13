@@ -695,10 +695,12 @@ function IoTAppCard({
   title,
   desc,
   icon,
+  examples,
 }: {
   title: string;
   desc: string;
   icon: React.ReactNode;
+  examples?: string[];
 }) {
   return (
     <motion.div
@@ -713,7 +715,17 @@ function IoTAppCard({
         {icon}
       </div>
       <h3 className="font-semibold mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{desc}</p>
+      <p className="text-sm text-muted-foreground mb-3">{desc}</p>
+      {examples && (
+        <ul className="text-xs space-y-1">
+          {examples.map((ex) => (
+            <li key={ex} className="flex items-center gap-1 text-primary/70">
+              <span className="h-1 w-1 rounded-full bg-primary" />
+              {ex}
+            </li>
+          ))}
+        </ul>
+      )}
     </motion.div>
   );
 }
