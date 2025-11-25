@@ -290,7 +290,7 @@ export default function Index() {
             ]}
           />
           <CoECard
-            emoji="����"
+            emoji="🚗"
             icon={<Car className="h-6 w-6" />}
             title="Automotive"
             highlight="Connected Vehicles"
@@ -701,28 +701,39 @@ function OverviewCard({
   icon,
   title,
   desc,
+  index = 0,
 }: {
   icon: React.ReactNode;
   title: string;
   desc: string;
+  index?: number;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -6, boxShadow: "0 24px 48px rgba(0,0,0,0.12)" }}
-      transition={{ duration: 0.5 }}
-      className="relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-7 shadow-lg hover:shadow-xl transition-all group overflow-hidden"
+      whileHover={{ y: -8, boxShadow: "0 32px 64px rgba(0,0,0,0.15)" }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-7 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all group overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <motion.div className="absolute top-0 right-0 h-40 w-40 bg-gradient-to-bl from-primary/20 via-transparent to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative">
-        <div className="flex items-center gap-3 font-bold mb-3 text-lg">
-          <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-md">
+        <motion.div
+          className="flex items-center gap-3 font-bold mb-3 text-lg"
+          whileHover={{ x: 4 }}
+          transition={{ duration: 0.2 }}
+        >
+          <motion.span
+            className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-md"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          >
             {icon}
-          </span>
+          </motion.span>
           {title}
-        </div>
+        </motion.div>
         <p className="text-base text-foreground/65 leading-relaxed">{desc}</p>
       </div>
     </motion.div>
