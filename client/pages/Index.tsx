@@ -63,7 +63,9 @@ export default function Index() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mt-6 text-lg md:text-xl text-foreground/70 max-w-lg leading-relaxed font-medium"
               >
-                Enabling global companies with product and engineering services. Start-to-finish embedded systems expertise across hardware, software, testing, and support.
+                Enabling global companies with product and engineering services.
+                Start-to-finish embedded systems expertise across hardware,
+                software, testing, and support.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -71,10 +73,19 @@ export default function Index() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="mt-8 flex flex-wrap gap-4"
               >
-                <Button asChild size="lg" className="h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                >
                   <a href="/contact">Get Started</a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base font-semibold rounded-lg border-2 hover:border-primary">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="h-12 px-8 text-base font-semibold rounded-lg border-2 hover:border-primary"
+                >
                   <a href="/capabilities">Explore Capabilities</a>
                 </Button>
               </motion.div>
@@ -189,7 +200,8 @@ export default function Index() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-foreground/70 max-w-2xl mx-auto font-medium"
           >
-            Discover our capabilities, view our work, or get in touch with our team
+            Discover our capabilities, view our work, or get in touch with our
+            team
           </motion.p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
@@ -645,7 +657,11 @@ export default function Index() {
                 of expertise.
               </p>
             </div>
-            <Button asChild size="lg" className="md:flex-shrink-0 h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
+            <Button
+              asChild
+              size="lg"
+              className="md:flex-shrink-0 h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
+            >
               <a href="/contact">Start a conversation</a>
             </Button>
           </div>
@@ -669,8 +685,12 @@ function Stat({ kpi, label }: { kpi: string; label: string }) {
     >
       <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       <div className="relative">
-        <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{kpi}</div>
-        <div className="text-sm md:text-base font-semibold text-foreground/60 mt-2">{label}</div>
+        <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {kpi}
+        </div>
+        <div className="text-sm md:text-base font-semibold text-foreground/60 mt-2">
+          {label}
+        </div>
       </div>
     </motion.div>
   );
@@ -734,10 +754,16 @@ function CoECard({
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative">
-        <div className="text-5xl mb-4 inline-block transform group-hover:scale-110 transition-transform duration-300">{emoji}</div>
+        <div className="text-5xl mb-4 inline-block transform group-hover:scale-110 transition-transform duration-300">
+          {emoji}
+        </div>
         <h3 className="font-bold text-xl mb-2">{title}</h3>
-        <p className="text-sm font-semibold text-primary/80 mb-3 uppercase tracking-wide">{highlight}</p>
-        <p className="text-base text-foreground/65 mb-5 leading-relaxed">{desc}</p>
+        <p className="text-sm font-semibold text-primary/80 mb-3 uppercase tracking-wide">
+          {highlight}
+        </p>
+        <p className="text-base text-foreground/65 mb-5 leading-relaxed">
+          {desc}
+        </p>
         <div className="flex flex-wrap gap-2">
           {topics.map((topic) => (
             <span
@@ -777,10 +803,16 @@ function ExpertiseCard({
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative">
-        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">{icon}</div>
+        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>
         <h3 className="font-bold text-2xl mb-2">{title}</h3>
-        <p className="text-sm font-semibold text-primary/80 mb-4 uppercase tracking-wide">{subtitle}</p>
-        <p className="text-base text-foreground/65 mb-6 leading-relaxed">{desc}</p>
+        <p className="text-sm font-semibold text-primary/80 mb-4 uppercase tracking-wide">
+          {subtitle}
+        </p>
+        <p className="text-base text-foreground/65 mb-6 leading-relaxed">
+          {desc}
+        </p>
         <ul className="space-y-3">
           {items.map((item) => (
             <li key={item} className="flex items-start gap-3 text-sm">
@@ -858,7 +890,9 @@ function LinkCard({
             >
               {icon}
             </motion.span>
-            <span className="group-hover:text-primary transition-colors duration-300">{title}</span>
+            <span className="group-hover:text-primary transition-colors duration-300">
+              {title}
+            </span>
           </div>
           <p className="mt-4 text-base text-foreground/70 leading-relaxed font-medium">
             {desc}
@@ -919,7 +953,9 @@ function DomainCard({
             <span className="grid h-12 w-12 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-lg group-hover:shadow-xl transition-all">
               {icon}
             </span>
-            <span className="group-hover:text-primary transition-colors">{title}</span>
+            <span className="group-hover:text-primary transition-colors">
+              {title}
+            </span>
           </div>
           <p className="mt-3 text-base text-foreground/75 leading-relaxed">
             {desc}
@@ -965,11 +1001,16 @@ function IoTAppCard({
           {icon}
         </div>
         <h3 className="font-bold text-lg mb-3">{title}</h3>
-        <p className="text-base text-foreground/65 mb-5 leading-relaxed">{desc}</p>
+        <p className="text-base text-foreground/65 mb-5 leading-relaxed">
+          {desc}
+        </p>
         {examples && (
           <ul className="text-sm space-y-2.5">
             {examples.map((ex) => (
-              <li key={ex} className="flex items-center gap-2 text-foreground/70 font-medium">
+              <li
+                key={ex}
+                className="flex items-center gap-2 text-foreground/70 font-medium"
+              >
                 <span className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accent flex-shrink-0" />
                 {ex}
               </li>
