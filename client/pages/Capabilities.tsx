@@ -408,20 +408,26 @@ function Card({
 function ExpertiseGroup({
   title,
   children,
+  index = 0,
 }: {
   title: string;
   children: React.ReactNode;
+  index?: number;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur"
+      whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(0,0,0,0.1)" }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="rounded-lg border border-primary/15 p-6 bg-card/60 backdrop-blur hover:border-primary/40 transition-all group"
     >
-      <h3 className="font-semibold mb-4">{title}</h3>
-      {children}
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+      <h3 className="font-semibold mb-4 relative text-foreground">{title}</h3>
+      <div className="relative">
+        {children}
+      </div>
     </motion.div>
   );
 }
