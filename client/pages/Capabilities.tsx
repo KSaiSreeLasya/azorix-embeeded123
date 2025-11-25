@@ -62,6 +62,7 @@ export default function Capabilities() {
               "Quality checks",
               "Manufacturing guidance",
             ]}
+            index={0}
           />
           <Card
             icon={<Code2 className="h-5 w-5" />}
@@ -76,6 +77,7 @@ export default function Capabilities() {
               "User interfaces",
               "Integration & optimization",
             ]}
+            index={1}
           />
           <Card
             icon={<Shield className="h-5 w-5" />}
@@ -90,6 +92,7 @@ export default function Capabilities() {
               "Stability verification",
               "Standards compliance",
             ]}
+            index={2}
           />
           <Card
             icon={<Users className="h-5 w-5" />}
