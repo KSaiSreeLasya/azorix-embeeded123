@@ -149,7 +149,7 @@ const projects = [
     id: 7,
     category: "Automotive & Industrial",
     title: "Connected Motorcycle Helmet",
-    image: "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg",
+    image: "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <Monitor className="h-5 w-5" />,
     shortDesc: "Smart helmet with GPS, camera, and Bluetooth communication",
     realWorldUse: "Motorcycle enthusiasts and professional racers use this helmet for navigation, recording rides, communicating with team members, and safety monitoring.",
