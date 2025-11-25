@@ -50,7 +50,10 @@ export default function SiteHeader() {
             {location.pathname !== "/" && (
               <BackButton className="hidden sm:inline-flex" />
             )}
-            <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
+            <Link
+              to="/"
+              className="flex items-center gap-3 group flex-shrink-0"
+            >
               <span className="relative inline-flex max-w-xl">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F3b9a6b06591c4cdeb476566ddc00c0bc?format=webp&width=800"
