@@ -258,16 +258,19 @@ export default function Capabilities() {
             icon="📋"
             title="Project-Based"
             desc="You define what needs to be built, and we deliver it. Perfect when you have a specific goal - like launching a new product feature."
+            index={0}
           />
           <ServiceCard
             icon="👥"
             title="Team Expansion"
             desc="Boost your team with our skilled engineers. They work like your own employees - same goals, same team, no separate management needed."
+            index={1}
           />
           <ServiceCard
             icon="🚀"
             title="Build & Transfer"
             desc="We build the capability you need, run it for a while, then hand it over completely to your team so you're fully independent."
+            index={2}
           />
         </div>
       </Section>
