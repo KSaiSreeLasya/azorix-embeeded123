@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
@@ -84,12 +85,23 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-            Contact
+          <div className="mb-2">
+            <motion.span
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 border border-primary/30 text-sm font-semibold text-primary mb-4"
+            >
+              Get In Touch
+            </motion.span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent tracking-tight pb-6">
+            Let's Build Something Great
           </h1>
-          <p className="mt-3 text-muted-foreground max-w-2xl">
+          <p className="mt-4 text-lg text-foreground/70 max-w-2xl leading-relaxed font-medium">
             Tell us about your project or resource needs. Our leadership team
-            will respond promptly.
+            will respond promptly and work with you to find the perfect
+            solution.
           </p>
         </motion.div>
 
@@ -133,7 +145,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-8 grid gap-6 max-w-3xl rounded-xl border bg-card/60 backdrop-blur p-6 md:p-8"
+          className="mt-8 grid gap-6 max-w-3xl rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5 backdrop-blur p-6 md:p-10 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all"
         >
           <div className="grid gap-6 md:grid-cols-2">
             <motion.div
@@ -198,18 +210,20 @@ export default function Contact() {
               transition={{ duration: 0.3, delay: 0.25 }}
             >
               <div className="relative">
-                <label className="text-sm font-medium text-foreground">
+                <label className="text-sm font-semibold text-foreground">
                   Budget
                 </label>
-                <motion.select
-                  className="mt-2 w-full rounded-lg border border-primary/20 bg-background px-4 py-3 text-foreground transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/80 hover:border-primary/40"
+                <select
+                  className="mt-2 w-full rounded-lg border border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5 px-4 py-3 text-foreground transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/60 hover:border-primary/40 hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 appearance-none"
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
                   disabled={isLoading}
-                  whileHover={{ borderColor: "hsl(var(--primary) / 0.4)" }}
-                  whileFocus={{
-                    boxShadow: "0 0 20px rgba(var(--primary-rgb), 0.2)",
-                    borderColor: "hsl(var(--primary) / 0.8)",
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23888' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "right 0.75rem center",
+                    backgroundSize: "16px 16px",
+                    paddingRight: "2.5rem",
                   }}
                 >
                   <option value="">Select range</option>
@@ -217,7 +231,7 @@ export default function Contact() {
                   <option value="$10k–$50k">$10k–$50k</option>
                   <option value="$50k–$200k">$50k–$200k</option>
                   <option value="> $200k">More than $200k</option>
-                </motion.select>
+                </select>
               </div>
             </motion.div>
 
@@ -228,18 +242,20 @@ export default function Contact() {
               transition={{ duration: 0.3, delay: 0.3 }}
             >
               <div className="relative">
-                <label className="text-sm font-medium text-foreground">
+                <label className="text-sm font-semibold text-foreground">
                   Timeline
                 </label>
-                <motion.select
-                  className="mt-2 w-full rounded-lg border border-primary/20 bg-background px-4 py-3 text-foreground transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/80 hover:border-primary/40"
+                <select
+                  className="mt-2 w-full rounded-lg border border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5 px-4 py-3 text-foreground transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/60 hover:border-primary/40 hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 appearance-none"
                   value={timeline}
                   onChange={(e) => setTimeline(e.target.value)}
                   disabled={isLoading}
-                  whileHover={{ borderColor: "hsl(var(--primary) / 0.4)" }}
-                  whileFocus={{
-                    boxShadow: "0 0 20px rgba(var(--primary-rgb), 0.2)",
-                    borderColor: "hsl(var(--primary) / 0.8)",
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23888' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "right 0.75rem center",
+                    backgroundSize: "16px 16px",
+                    paddingRight: "2.5rem",
                   }}
                 >
                   <option value="">Select timeline</option>
@@ -247,7 +263,7 @@ export default function Contact() {
                   <option value="1–3 months">1–3 months</option>
                   <option value="3–6 months">3–6 months</option>
                   <option value="> 6 months">More than 6 months</option>
-                </motion.select>
+                </select>
               </div>
             </motion.div>
           </div>
@@ -272,23 +288,30 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className="flex items-center gap-3"
+            className="flex items-start gap-3 p-4 rounded-lg border border-primary/15 bg-primary/5"
           >
             <motion.input
               id="agree"
               type="checkbox"
-              className="h-5 w-5 rounded border-primary/20 accent-primary cursor-pointer"
+              className="h-5 w-5 rounded border border-primary/30 accent-primary cursor-pointer mt-0.5 flex-shrink-0"
               checked={agree}
               onChange={(e) => setAgree(e.target.checked)}
               disabled={isLoading}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             />
             <label
               htmlFor="agree"
-              className="text-sm text-muted-foreground cursor-pointer"
+              className="text-sm text-foreground/75 cursor-pointer font-medium leading-relaxed"
             >
-              I agree to be contacted and accept the privacy notice.
+              I agree to be contacted about my project and accept the{" "}
+              <Link
+                to="/privacy"
+                className="text-primary hover:underline font-semibold transition-colors"
+              >
+                privacy notice
+              </Link>
+              .
             </label>
           </motion.div>
 
@@ -297,10 +320,11 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.45 }}
+            className="flex items-center gap-4 pt-2"
           >
             <Button
               type="submit"
-              className="w-full md:w-fit h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
+              className="h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
               disabled={isLoading}
             >
               {isLoading ? (
@@ -311,9 +335,18 @@ export default function Contact() {
                   Sending...
                 </motion.span>
               ) : (
-                "Send message"
+                "Send Message"
               )}
             </Button>
+            <motion.p
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="text-sm text-foreground/60 font-medium"
+            >
+              We'll get back to you within 24 hours
+            </motion.p>
           </motion.div>
         </motion.form>
         <motion.div
@@ -321,53 +354,75 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-10 grid gap-6 md:grid-cols-2 text-sm text-muted-foreground"
+          className="mt-12 grid gap-6 md:grid-cols-2 text-sm text-muted-foreground"
         >
           <motion.div
-            className="rounded-xl border border-primary/15 bg-card/60 p-5 hover:border-primary/40 transition-all hover:shadow-lg"
-            whileHover={{ y: -4 }}
+            className="relative rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 via-background to-accent/5 p-6 hover:border-primary/40 transition-all hover:shadow-xl group overflow-hidden"
+            whileHover={{ y: -6 }}
           >
-            <div className="font-medium text-foreground">Offices</div>
-            <div className="mt-2 space-y-1">
-              <motion.div
-                className="flex items-center gap-2"
-                whileHover={{ x: 4 }}
-              >
-                <MapPin className="h-4 w-4" /> Troy, MI, USA
-              </motion.div>
-              <motion.div
-                className="flex items-center gap-2"
-                whileHover={{ x: 4 }}
-              >
-                <MapPin className="h-4 w-4" /> Hyderabad, India
-              </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <MapPin className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <div className="font-semibold text-foreground text-base">
+                  Offices
+                </div>
+              </div>
+              <div className="mt-4 space-y-3">
+                <motion.div
+                  className="flex items-center gap-3 text-foreground/80"
+                  whileHover={{ x: 6 }}
+                >
+                  <div className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accent" />
+                  Hyderabad, India
+                </motion.div>
+              </div>
             </div>
           </motion.div>
           <motion.div
-            className="rounded-xl border border-primary/15 bg-card/60 p-5 grid gap-3 hover:border-primary/40 transition-all hover:shadow-lg"
-            whileHover={{ y: -4 }}
+            className="relative rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 via-background to-accent/5 p-6 grid gap-5 hover:border-primary/40 transition-all hover:shadow-xl group overflow-hidden"
+            whileHover={{ y: -6 }}
           >
-            <div>
-              <div className="font-medium text-foreground">Website</div>
-              <motion.a
-                className="inline-flex items-center gap-2 underline hover:text-primary transition-colors"
-                href="https://www.azorixembedded.com"
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ x: 4 }}
-              >
-                <Globe className="h-4 w-4" /> www.azorixembedded.com
-              </motion.a>
-            </div>
-            <div>
-              <div className="font-medium text-foreground">Email</div>
-              <motion.a
-                className="inline-flex items-center gap-2 underline hover:text-primary transition-colors"
-                href="mailto:info@azorixembedded.com"
-                whileHover={{ x: 4 }}
-              >
-                <Mail className="h-4 w-4" /> info@azorixembedded.com
-              </motion.a>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <Globe className="h-5 w-5 text-primary-foreground" />
+                  </div>
+                  <div className="font-semibold text-foreground text-base">
+                    Website
+                  </div>
+                </div>
+                <motion.a
+                  className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors font-medium"
+                  href="https://www.azorixembedded.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ x: 4 }}
+                >
+                  www.azorixembedded.com →
+                </motion.a>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <Mail className="h-5 w-5 text-primary-foreground" />
+                  </div>
+                  <div className="font-semibold text-foreground text-base">
+                    Email
+                  </div>
+                </div>
+                <motion.a
+                  className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors font-medium"
+                  href="mailto:info@azorixembedded.com"
+                  whileHover={{ x: 4 }}
+                >
+                  info@azorixembedded.com →
+                </motion.a>
+              </div>
             </div>
           </motion.div>
         </motion.div>

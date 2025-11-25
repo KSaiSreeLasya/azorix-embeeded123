@@ -79,18 +79,6 @@ export default function Index() {
                 >
                   <Button
                     asChild
-                    size="lg"
-                    className="h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-2xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
-                  >
-                    <a href="/contact">Get Started</a>
-                  </Button>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    asChild
                     variant="outline"
                     size="lg"
                     className="h-12 px-8 text-base font-semibold rounded-lg border-2 border-primary/50 hover:border-primary hover:bg-primary/5 transition-all duration-200"

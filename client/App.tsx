@@ -1,7 +1,6 @@
 import "./global.css";
 
 import { Toaster } from "@/components/ui/toaster";
-import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -38,6 +37,8 @@ import MedicalIoT from "./pages/iot/Medical";
 import SmartCity from "./pages/iot/SmartCity";
 import AutomotiveIoT from "./pages/iot/Automotive";
 import ConsumerIoT from "./pages/iot/Consumer";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,8 @@ function AppRoutes() {
           <Route path="/capabilities" element={<Capabilities />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
 
           {/* Domain Routes */}
           <Route path="/domains/iot" element={<Iot />} />
@@ -121,4 +124,4 @@ const App = () => (
   </ThemeProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+export default App;
