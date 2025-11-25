@@ -860,9 +860,13 @@ function Pill({
   icon?: React.ReactNode;
 }) {
   return (
-    <span className="inline-flex items-center gap-1 rounded-full border bg-background/80 backdrop-blur px-3 py-1 text-sm">
-      {icon}
+    <motion.span
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur px-4 py-2 text-sm font-semibold text-foreground hover:border-primary/50 hover:bg-gradient-to-r hover:from-primary/15 hover:to-accent/15 transition-all shadow-sm hover:shadow-md"
+    >
+      {icon && <span className="text-primary">{icon}</span>}
       {children}
-    </span>
+    </motion.span>
   );
 }
