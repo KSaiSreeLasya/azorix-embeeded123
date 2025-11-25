@@ -233,14 +233,38 @@ const projects = [
 ];
 
 const clientLogos = [
-  { name: "Qualcomm", color: "from-blue-600 to-blue-400" },
-  { name: "Intel", color: "from-blue-700 to-blue-500" },
-  { name: "Bosch", color: "from-red-600 to-red-400" },
-  { name: "Ford", color: "from-blue-800 to-blue-600" },
-  { name: "Thermo Fisher Scientific", color: "from-orange-600 to-orange-400" },
-  { name: "AMD", color: "from-red-700 to-red-500" },
-  { name: "Tech Mahindra", color: "from-blue-600 to-cyan-400" },
-  { name: "OnePlus", color: "from-red-600 to-pink-500" },
+  {
+    name: "Qualcomm",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Febf2ef164d994b569d71f886ae6009ac?format=webp&width=800",
+  },
+  {
+    name: "Intel",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F1fe0861a53234f258ae05b386a218919?format=webp&width=800",
+  },
+  {
+    name: "Bosch",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fd561fc3109de4576ab82554c59cbf464?format=webp&width=800",
+  },
+  {
+    name: "Ford",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4ba3011410274053ae9c2ac7560f311a?format=webp&width=800",
+  },
+  {
+    name: "Thermo Fisher Scientific",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fc33c02f95c7e4e5a9dafd9e8f214ac20?format=webp&width=800",
+  },
+  {
+    name: "AMD",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fb04649cc615a496a856fe43a6b580976?format=webp&width=800",
+  },
+  {
+    name: "Tech Mahindra",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4a8685ebce2c4f1784f5b8bb8245e7ce?format=webp&width=800",
+  },
+  {
+    name: "OnePlus",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F0e0f616b739c44a594f103a1b958f321?format=webp&width=800",
+  },
 ];
 
 export default function Projects() {
