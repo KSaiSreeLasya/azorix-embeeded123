@@ -314,12 +314,14 @@ function Card({
   description,
   items,
   icon,
+  index = 0,
 }: {
   title: string;
   subtitle?: string;
   description?: string;
   items: string[];
   icon?: React.ReactNode;
+  index?: number;
 }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -328,51 +330,72 @@ function Card({
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(0,0,0,0.1)" }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur cursor-pointer overflow-hidden"
+      whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.4, delay: index * 0.06 }}
+      className="rounded-lg border border-primary/15 p-6 bg-card/60 backdrop-blur cursor-pointer overflow-hidden hover:border-primary/40 transition-all group"
       onClick={() => setExpanded(!expanded)}
     >
-      <div className="flex items-start gap-3 mb-3">
-        <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-primary/60 text-primary-foreground flex-shrink-0 shadow-md">
-          {icon}
-        </span>
-        <div className="flex-1">
-          <h3 className="font-bold text-foreground">{title}</h3>
-          {subtitle && (
-            <p className="text-xs text-primary font-semibold mt-0.5">
-              {subtitle}
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <div className="flex items-start gap-3 mb-3">
+          <motion.span
+            className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-primary/60 text-primary-foreground flex-shrink-0 shadow-md"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          >
+            {icon}
+          </motion.span>
+          <div className="flex-1">
+            <h3 className="font-bold text-foreground">{title}</h3>
+            {subtitle && (
+              <p className="text-xs text-primary font-semibold mt-0.5">
+                {subtitle}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{
+            opacity: expanded ? 1 : 0.7,
+            height: expanded ? "auto" : "auto",
+          }}
+          transition={{ duration: 0.3 }}
+          className={expanded ? "block" : "hidden sm:block"}
+        >
+          {description && (
+            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+              {description}
             </p>
           )}
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            {items.map((i, idx) => (
+              <motion.li
+                key={i}
+                className="flex items-start gap-2"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: idx * 0.05 }}
+              >
+                <motion.span
+                  className="mt-0.5 h-4 w-4 text-primary flex-shrink-0"
+                  whileInView={{ scale: [0, 1.2, 1] }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.05 + 0.1 }}
+                >
+                  <CheckCircle2 className="h-4 w-4" />
+                </motion.span>
+                <span>{i}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+
+        <div className="mt-3 text-xs text-primary font-semibold sm:hidden">
+          {expanded ? "Show less" : "Show details"}
         </div>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{
-          opacity: expanded ? 1 : 0.7,
-          height: expanded ? "auto" : "auto",
-        }}
-        transition={{ duration: 0.3 }}
-        className={expanded ? "block" : "hidden sm:block"}
-      >
-        {description && (
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-            {description}
-          </p>
-        )}
-        <ul className="space-y-2 text-sm text-muted-foreground">
-          {items.map((i) => (
-            <li key={i} className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
-              <span>{i}</span>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
-
-      <div className="mt-3 text-xs text-primary font-semibold sm:hidden">
-        {expanded ? "Show less" : "Show details"}
       </div>
     </motion.div>
   );
