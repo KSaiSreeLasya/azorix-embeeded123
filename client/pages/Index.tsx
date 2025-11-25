@@ -209,7 +209,7 @@ export default function Index() {
             to="/capabilities"
             title="Capabilities"
             desc="End‑to‑end product engineering across hardware, software, and test."
-            image="https://images.pexels.com/photos/3938016/pexels-photo-3938016.jpeg"
+            image=""
             icon={<Layers className="h-5 w-5" />}
             delay={0}
           />
@@ -217,7 +217,7 @@ export default function Index() {
             to="/projects"
             title="Projects"
             desc="Selected work across medical, industrial, consumer and automotive."
-            image="https://images.pexels.com/photos/7974/pexels-photo-7974.jpeg"
+            image=""
             icon={<Award className="h-5 w-5" />}
             delay={0.1}
           />
@@ -225,7 +225,7 @@ export default function Index() {
             to="/contact"
             title="Contact"
             desc="Talk to our team about your product or resource needs."
-            image="https://images.pexels.com/photos/8728429/pexels-photo-8728429.jpeg"
+            image=""
             icon={<Wrench className="h-5 w-5" />}
             delay={0.2}
           />
