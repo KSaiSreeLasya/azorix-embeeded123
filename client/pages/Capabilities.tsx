@@ -287,36 +287,66 @@ export default function Capabilities() {
 
 function Card({
   title,
+  subtitle,
+  description,
   items,
   icon,
 }: {
   title: string;
+  subtitle?: string;
+  description?: string;
   items: string[];
   icon?: React.ReactNode;
 }) {
+  const [expanded, setExpanded] = motion.useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -2, boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}
+      whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(0,0,0,0.1)" }}
       transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur"
+      className="rounded-lg border p-6 bg-card/60 backdrop-blur cursor-pointer overflow-hidden"
+      onClick={() => setExpanded(!expanded)}
     >
-      <div className="flex items-center gap-2 font-semibold mb-3 text-foreground">
-        <span className="grid h-8 w-8 place-items-center rounded-md bg-primary/15 text-primary">
+      <div className="flex items-start gap-3 mb-3">
+        <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-primary/60 text-primary-foreground flex-shrink-0 shadow-md">
           {icon}
         </span>
-        <span>{title}</span>
+        <div className="flex-1">
+          <h3 className="font-bold text-foreground">{title}</h3>
+          {subtitle && <p className="text-xs text-primary font-semibold mt-0.5">{subtitle}</p>}
+        </div>
       </div>
-      <ul className="space-y-2 text-sm text-muted-foreground">
-        {items.map((i) => (
-          <li key={i} className="flex items-start gap-2">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
-            <span>{i}</span>
-          </li>
-        ))}
-      </ul>
+
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{
+          opacity: expanded ? 1 : 0.7,
+          height: expanded ? "auto" : "auto"
+        }}
+        transition={{ duration: 0.3 }}
+        className={expanded ? "block" : "hidden sm:block"}
+      >
+        {description && (
+          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+            {description}
+          </p>
+        )}
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          {items.map((i) => (
+            <li key={i} className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
+              <span>{i}</span>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
+
+      <div className="mt-3 text-xs text-primary font-semibold sm:hidden">
+        {expanded ? "Show less" : "Show details"}
+      </div>
     </motion.div>
   );
 }
