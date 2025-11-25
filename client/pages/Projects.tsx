@@ -65,7 +65,7 @@ const projects = [
     id: 3,
     category: "Medical & Wearables",
     title: "Smart Blood Pressure Monitor",
-    image: "https://images.pexels.com/photos/8367747/pexels-photo-8367747.jpeg",
+    image: "https://images.pexels.com/photos/8367747/pexels-photo-8367747.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <Zap className="h-5 w-5" />,
     shortDesc: "Wireless monitor that sends blood pressure readings to your phone",
     realWorldUse: "Hospitals, clinics, and patients managing hypertension use this to track blood pressure remotely. Doctors can monitor multiple patients from anywhere, enabling telemedicine and early intervention.",
