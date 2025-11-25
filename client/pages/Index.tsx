@@ -357,6 +357,7 @@ export default function Index() {
               "Component selection",
               "Quality assurance",
             ]}
+            index={0}
           />
           <ExpertiseCard
             icon="💻"
@@ -370,6 +371,7 @@ export default function Index() {
               "User interfaces",
               "Cloud integration",
             ]}
+            index={1}
           />
           <ExpertiseCard
             icon="✓"
@@ -383,6 +385,7 @@ export default function Index() {
               "Reliability testing",
               "Compliance verification",
             ]}
+            index={2}
           />
           <ExpertiseCard
             icon="🤝"
@@ -396,6 +399,7 @@ export default function Index() {
               "Escalation support",
               "Knowledge transfer",
             ]}
+            index={3}
           />
         </div>
       </Section>
