@@ -236,28 +236,27 @@ function CapabilityCard({
   icon,
   title,
   desc,
+  index = 0,
 }: {
   icon: React.ReactNode;
   title: string;
   desc: string;
+  index?: number;
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
-    >
+    <AnimatedCard variant="hover-glow" index={index}>
       <div className="flex items-center gap-3 mb-3">
-        <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/15 text-primary">
+        <motion.span
+          className="grid h-10 w-10 place-items-center rounded-lg bg-primary/15 text-primary"
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
           {icon}
-        </span>
+        </motion.span>
         <h3 className="font-semibold">{title}</h3>
       </div>
       <p className="text-sm text-muted-foreground">{desc}</p>
-    </motion.div>
+    </AnimatedCard>
   );
 }
 
