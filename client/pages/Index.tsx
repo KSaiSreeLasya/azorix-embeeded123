@@ -799,19 +799,21 @@ function LinkCard({
   desc,
   image,
   icon,
+  delay = 0,
 }: {
   to: string;
   title: string;
   desc: string;
   image: string;
   icon: React.ReactNode;
+  delay?: number;
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.6, delay, type: "spring", stiffness: 100 }}
     >
       <Link
         to={to}
