@@ -237,7 +237,7 @@ export default function Index() {
             ]}
           />
           <CoECard
-            emoji="��"
+            emoji="🏥"
             icon={<Stethoscope className="h-6 w-6" />}
             title="Medical Devices"
             highlight="Healthcare"
@@ -275,14 +275,26 @@ export default function Index() {
 
       {/* Expertise Capabilities */}
       <Section>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+        <div className="text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-4xl font-black bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4"
+          >
             Four Pillars of Expertise
-          </h2>
-          <p className="text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed font-medium"
+          >
             Complete end-to-end engineering solutions from hardware to
             deployment
-          </p>
+          </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <ExpertiseCard
