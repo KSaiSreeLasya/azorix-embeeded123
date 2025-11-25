@@ -849,14 +849,12 @@ function LinkCard({
   to,
   title,
   desc,
-  image,
   icon,
   delay = 0,
 }: {
   to: string;
   title: string;
   desc: string;
-  image: string;
   icon: React.ReactNode;
   delay?: number;
 }) {
@@ -869,7 +867,7 @@ function LinkCard({
     >
       <Link
         to={to}
-        className="group relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-7 shadow-lg hover:shadow-xl hover:y-6 transition-all overflow-hidden block"
+        className="group relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-7 shadow-lg hover:shadow-xl transition-all overflow-hidden block"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <div className="relative">
