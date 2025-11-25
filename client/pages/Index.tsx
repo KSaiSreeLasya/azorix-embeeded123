@@ -543,14 +543,18 @@ export default function Index() {
 function Stat({ kpi, label }: { kpi: string; label: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border bg-background/70 p-4 shadow-sm hover:shadow-md transition-shadow"
+      transition={{ duration: 0.5 }}
+      whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+      className="relative rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-6 backdrop-blur shadow-md hover:shadow-lg transition-all"
     >
-      <div className="text-2xl font-bold">{kpi}</div>
-      <div className="text-xs text-muted-foreground">{label}</div>
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{kpi}</div>
+        <div className="text-sm md:text-base font-semibold text-foreground/60 mt-2">{label}</div>
+      </div>
     </motion.div>
   );
 }
