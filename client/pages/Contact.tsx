@@ -367,13 +367,7 @@ export default function Contact() {
                 <div className="font-semibold text-foreground text-base">Offices</div>
               </div>
               <div className="mt-4 space-y-3">
-                <motion.div
-                  className="flex items-center gap-3 text-foreground/80"
-                  whileHover={{ x: 6 }}
-                >
-                  <div className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accent" />
-                  Troy, MI, USA
-                </motion.div>
+                
                 <motion.div
                   className="flex items-center gap-3 text-foreground/80"
                   whileHover={{ x: 6 }}
