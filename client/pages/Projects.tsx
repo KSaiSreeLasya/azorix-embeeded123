@@ -282,11 +282,11 @@ export default function Projects() {
           <h2 className="text-2xl md:text-3xl font-bold mb-2">{category}</h2>
           <p className="text-muted-foreground mb-8">
             {category === "Medical & Wearables" &&
-              "Regulated medical devices and consumer health monitoring solutions."}
+              "Devices that help people stay healthy - from fitness trackers to medical-grade monitors. All built with precision and care."}
             {category === "IoT & Consumer" &&
-              "Smart home and IoT connectivity solutions."}
+              "Smart devices that make life easier - controlling homes, securing doors, and automating daily tasks."}
             {category === "Automotive & Industrial" &&
-              "Automotive embedded systems and industrial IoT solutions."}
+              "Connected systems for vehicles and industry - from smart helmets to water treatment systems with predictive maintenance."}
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects
