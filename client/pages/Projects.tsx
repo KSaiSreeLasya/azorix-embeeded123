@@ -233,14 +233,46 @@ const projects = [
 ];
 
 const clientLogos = [
-  { name: "Qualcomm", color: "from-blue-600 to-blue-400" },
-  { name: "Intel", color: "from-blue-700 to-blue-500" },
-  { name: "Bosch", color: "from-red-600 to-red-400" },
-  { name: "Ford", color: "from-blue-800 to-blue-600" },
-  { name: "Thermo Fisher Scientific", color: "from-orange-600 to-orange-400" },
-  { name: "AMD", color: "from-red-700 to-red-500" },
-  { name: "Tech Mahindra", color: "from-blue-600 to-cyan-400" },
-  { name: "OnePlus", color: "from-red-600 to-pink-500" },
+  {
+    name: "Qualcomm",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Febf2ef164d994b569d71f886ae6009ac?format=webp&width=800",
+    size: "max-h-16",
+  },
+  {
+    name: "Intel",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F1fe0861a53234f258ae05b386a218919?format=webp&width=800",
+    size: "max-h-16",
+  },
+  {
+    name: "Bosch",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fd561fc3109de4576ab82554c59cbf464?format=webp&width=800",
+    size: "max-h-16",
+  },
+  {
+    name: "Ford",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4ba3011410274053ae9c2ac7560f311a?format=webp&width=800",
+    size: "max-h-16",
+  },
+  {
+    name: "Thermo Fisher Scientific",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fc33c02f95c7e4e5a9dafd9e8f214ac20?format=webp&width=800",
+    size: "max-h-24",
+  },
+  {
+    name: "AMD",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fb04649cc615a496a856fe43a6b580976?format=webp&width=800",
+    size: "max-h-24",
+  },
+  {
+    name: "Tech Mahindra",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4a8685ebce2c4f1784f5b8bb8245e7ce?format=webp&width=800",
+    size: "max-h-24",
+  },
+  {
+    name: "OnePlus",
+    logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F0e0f616b739c44a594f103a1b958f321?format=webp&width=800",
+    size: "max-h-24",
+  },
 ];
 
 export default function Projects() {
@@ -520,27 +552,26 @@ export default function Projects() {
             their embedded systems to life
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {clientLogos.map((logo, idx) => (
-            <motion.div
-              key={logo.name}
-              initial={{ opacity: 0, y: 12, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8, boxShadow: "0 16px 40px rgba(0,0,0,0.15)" }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className={`rounded-lg border border-primary/15 p-8 flex items-center justify-center min-h-32 bg-gradient-to-br ${logo.color} opacity-25 hover:opacity-40 transition-all cursor-default group overflow-hidden`}
-            >
-              <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <motion.span
-                className="font-bold text-foreground text-center text-sm relative"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
+        <div className="marquee-container">
+          <div className="marquee-content animate-marquee">
+            {[...clientLogos, ...clientLogos.slice(0, 2)].map((logo, idx) => (
+              <div
+                key={`${logo.name}-${idx}`}
+                className="relative rounded-2xl border border-primary/20 p-6 flex flex-col items-center justify-center min-h-40 min-w-40 bg-gradient-to-br from-primary/5 to-accent/5 transition-all duration-300 group overflow-hidden flex-shrink-0"
               >
-                {logo.name}
-              </motion.span>
-            </motion.div>
-          ))}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-center justify-center h-full w-full">
+                  <img
+                    src={logo.logo}
+                    alt={logo.name}
+                    loading="lazy"
+                    decoding="async"
+                    className={`${logo.size} max-w-[85%] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 

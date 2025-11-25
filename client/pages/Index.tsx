@@ -273,57 +273,65 @@ export default function Index() {
           </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <CoECard
-            emoji="📱"
-            icon={<Smartphone className="h-6 w-6" />}
-            title="Handheld & IoT"
-            highlight="Smart Devices"
-            desc="Building smart devices - phones, watches, home devices"
-            topics={[
-              "Android",
-              "Connectivity",
-              "Low-power design",
-              "User apps",
-            ]}
-            index={0}
-          />
-          <CoECard
-            emoji="🏥"
-            icon={<Stethoscope className="h-6 w-6" />}
-            title="Medical Devices"
-            highlight="Healthcare"
-            desc="Medical-grade devices that save lives"
-            topics={[
-              "Regulatory compliance",
-              "Patient safety",
-              "Sensor integration",
-              "Data security",
-            ]}
-            index={1}
-          />
-          <CoECard
-            emoji="🚗"
-            icon={<Car className="h-6 w-6" />}
-            title="Automotive"
-            highlight="Connected Vehicles"
-            desc="Making cars smarter and safer"
-            topics={[
-              "Vehicle networks",
-              "Safety systems",
-              "Telematics",
-              "Real-time control",
-            ]}
-            index={2}
-          />
-          <CoECard
-            emoji="⚙️"
-            icon={<Cpu className="h-6 w-6" />}
-            title="Silicon & SoC"
-            highlight="Chip Design"
-            desc="Enabling next-generation processors"
-            topics={["Bootloaders", "Drivers", "Performance", "Validation"]}
-            index={3}
-          />
+          <Link to="/teams/handheld-iot">
+            <CoECard
+              emoji="📱"
+              icon={<Smartphone className="h-6 w-6" />}
+              title="Handheld & IoT"
+              highlight="Smart Devices"
+              desc="Building smart devices - phones, watches, home devices"
+              topics={[
+                "Android",
+                "Connectivity",
+                "Low-power design",
+                "User apps",
+              ]}
+              index={0}
+            />
+          </Link>
+          <Link to="/teams/medical">
+            <CoECard
+              emoji="🏥"
+              icon={<Stethoscope className="h-6 w-6" />}
+              title="Medical Devices"
+              highlight="Healthcare"
+              desc="Medical-grade devices that save lives"
+              topics={[
+                "Regulatory compliance",
+                "Patient safety",
+                "Sensor integration",
+                "Data security",
+              ]}
+              index={1}
+            />
+          </Link>
+          <Link to="/teams/automotive">
+            <CoECard
+              emoji="🚗"
+              icon={<Car className="h-6 w-6" />}
+              title="Automotive"
+              highlight="Connected Vehicles"
+              desc="Making cars smarter and safer"
+              topics={[
+                "Vehicle networks",
+                "Safety systems",
+                "Telematics",
+                "Real-time control",
+              ]}
+              index={2}
+            />
+          </Link>
+          <Link to="/teams/silicon">
+            <CoECard
+              emoji="⚙️"
+              icon={<Cpu className="h-6 w-6" />}
+              title="Silicon & SoC"
+              highlight="Chip Design"
+              desc="Enabling next-generation processors"
+              topics={["Bootloaders", "Drivers", "Performance", "Validation"]}
+              index={3}
+            />
+          </Link>
         </div>
       </Section>
 
@@ -351,62 +359,70 @@ export default function Index() {
           </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <ExpertiseCard
-            icon="🛠️"
-            title="Product"
-            subtitle="Hardware Design"
-            desc="We design the physical hardware - circuits, PCBs, and all components that make devices work"
-            items={[
-              "Requirements analysis",
-              "System design & review",
-              "Schematic & PCB design",
-              "Component selection",
-              "Quality assurance",
-            ]}
-            index={0}
-          />
-          <ExpertiseCard
-            icon="💻"
-            title="Software"
-            subtitle="Device Intelligence"
-            desc="We write the code that makes devices smart - from firmware to apps"
-            items={[
-              "Bootloaders and drivers",
-              "Operating systems",
-              "Communication protocols",
-              "User interfaces",
-              "Cloud integration",
-            ]}
-            index={1}
-          />
-          <ExpertiseCard
-            icon="✓"
-            title="Testing"
-            subtitle="Quality Verification"
-            desc="We make sure everything works perfectly - testing and quality assurance"
-            items={[
-              "Automated testing",
-              "Stability testing",
-              "Performance validation",
-              "Reliability testing",
-              "Compliance verification",
-            ]}
-            index={2}
-          />
-          <ExpertiseCard
-            icon="🤝"
-            title="Support"
-            subtitle="Expert Guidance"
-            desc="We're here to help - training, resources, and ongoing support"
-            items={[
-              "Team augmentation",
-              "Technical training",
-              "Troubleshooting",
-              "Escalation support",
-              "Knowledge transfer",
-            ]}
-            index={3}
-          />
+          <Link to="/pillars/product">
+            <ExpertiseCard
+              icon="🛠️"
+              title="Product"
+              subtitle="Hardware Design"
+              desc="We design the physical hardware - circuits, PCBs, and all components that make devices work"
+              items={[
+                "Requirements analysis",
+                "System design & review",
+                "Schematic & PCB design",
+                "Component selection",
+                "Quality assurance",
+              ]}
+              index={0}
+            />
+          </Link>
+          <Link to="/pillars/software">
+            <ExpertiseCard
+              icon="💻"
+              title="Software"
+              subtitle="Device Intelligence"
+              desc="We write the code that makes devices smart - from firmware to apps"
+              items={[
+                "Bootloaders and drivers",
+                "Operating systems",
+                "Communication protocols",
+                "User interfaces",
+                "Cloud integration",
+              ]}
+              index={1}
+            />
+          </Link>
+          <Link to="/pillars/testing">
+            <ExpertiseCard
+              icon="✓"
+              title="Testing"
+              subtitle="Quality Verification"
+              desc="We make sure everything works perfectly - testing and quality assurance"
+              items={[
+                "Automated testing",
+                "Stability testing",
+                "Performance validation",
+                "Reliability testing",
+                "Compliance verification",
+              ]}
+              index={2}
+            />
+          </Link>
+          <Link to="/pillars/support">
+            <ExpertiseCard
+              icon="🤝"
+              title="Support"
+              subtitle="Expert Guidance"
+              desc="We're here to help - training, resources, and ongoing support"
+              items={[
+                "Team augmentation",
+                "Technical training",
+                "Troubleshooting",
+                "Escalation support",
+                "Knowledge transfer",
+              ]}
+              index={3}
+            />
+          </Link>
         </div>
       </Section>
 
@@ -431,18 +447,24 @@ export default function Index() {
           Flexible partnerships tailored to your project needs.
         </motion.p>
         <div className="grid gap-6 md:grid-cols-3">
-          <EngagementCard
-            title="Project / SoW"
-            desc="Complete project delivery with defined scope of work and timeline"
-          />
-          <EngagementCard
-            title="Resource Augmentation"
-            desc="Scale your team with skilled engineers working as extended team"
-          />
-          <EngagementCard
-            title="Build Operate Transfer"
-            desc="Build capability, operate services, then transfer to your team"
-          />
+          <Link to="/engagement/project-sow">
+            <EngagementCard
+              title="Project / SoW"
+              desc="Complete project delivery with defined scope of work and timeline"
+            />
+          </Link>
+          <Link to="/engagement/resource-augmentation">
+            <EngagementCard
+              title="Resource Augmentation"
+              desc="Scale your team with skilled engineers working as extended team"
+            />
+          </Link>
+          <Link to="/engagement/bot">
+            <EngagementCard
+              title="Build Operate Transfer"
+              desc="Build capability, operate services, then transfer to your team"
+            />
+          </Link>
         </div>
       </Section>
 
@@ -532,49 +554,63 @@ export default function Index() {
           </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-          <IoTAppCard
-            title="🏭 Industrial IoT"
-            desc="Factories that monitor themselves - machines that predict problems before they happen"
-            icon={<Zap className="h-6 w-6" />}
-            examples={[
-              "Predictive maintenance",
-              "Production optimization",
-              "Equipment monitoring",
-            ]}
-            index={0}
-          />
-          <IoTAppCard
-            title="🏥 Medical IoT"
-            desc="Devices that care for your health - from monitoring your heart to tracking fitness"
-            icon={<Stethoscope className="h-6 w-6" />}
-            examples={[
-              "Health monitoring",
-              "Patient alerts",
-              "Remote diagnosis",
-            ]}
-            index={1}
-          />
-          <IoTAppCard
-            title="🏙️ Smart City"
-            desc="Cities that work efficiently - traffic flows better, utilities use less energy"
-            icon={<Globe className="h-6 w-6" />}
-            examples={["Traffic management", "Energy saving", "Public safety"]}
-            index={2}
-          />
-          <IoTAppCard
-            title="🚗 Automotive IoT"
-            desc="Cars that are smarter and safer - connected and aware of their surroundings"
-            icon={<Car className="h-6 w-6" />}
-            examples={["Navigation", "Safety features", "Remote control"]}
-            index={3}
-          />
-          <IoTAppCard
-            title="📱 Consumer IoT"
-            desc="Home devices that listen and respond - making life simpler and more connected"
-            icon={<Smartphone className="h-6 w-6" />}
-            examples={["Smart home", "Wearables", "Personal devices"]}
-            index={4}
-          />
+          <Link to="/iot/industrial">
+            <IoTAppCard
+              title="🏭 Industrial IoT"
+              desc="Factories that monitor themselves - machines that predict problems before they happen"
+              icon={<Zap className="h-6 w-6" />}
+              examples={[
+                "Predictive maintenance",
+                "Production optimization",
+                "Equipment monitoring",
+              ]}
+              index={0}
+            />
+          </Link>
+          <Link to="/iot/medical">
+            <IoTAppCard
+              title="🏥 Medical IoT"
+              desc="Devices that care for your health - from monitoring your heart to tracking fitness"
+              icon={<Stethoscope className="h-6 w-6" />}
+              examples={[
+                "Health monitoring",
+                "Patient alerts",
+                "Remote diagnosis",
+              ]}
+              index={1}
+            />
+          </Link>
+          <Link to="/iot/smart-city">
+            <IoTAppCard
+              title="🏙️ Smart City"
+              desc="Cities that work efficiently - traffic flows better, utilities use less energy"
+              icon={<Globe className="h-6 w-6" />}
+              examples={[
+                "Traffic management",
+                "Energy saving",
+                "Public safety",
+              ]}
+              index={2}
+            />
+          </Link>
+          <Link to="/iot/automotive">
+            <IoTAppCard
+              title="🚗 Automotive IoT"
+              desc="Cars that are smarter and safer - connected and aware of their surroundings"
+              icon={<Car className="h-6 w-6" />}
+              examples={["Navigation", "Safety features", "Remote control"]}
+              index={3}
+            />
+          </Link>
+          <Link to="/iot/consumer">
+            <IoTAppCard
+              title="📱 Consumer IoT"
+              desc="Home devices that listen and respond - making life simpler and more connected"
+              icon={<Smartphone className="h-6 w-6" />}
+              examples={["Smart home", "Wearables", "Personal devices"]}
+              index={4}
+            />
+          </Link>
         </div>
       </Section>
 
@@ -601,62 +637,77 @@ export default function Index() {
             innovators worldwide
           </motion.p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              name: "Qualcomm",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Ff84798c90742499b9c530c34302a27b3?format=webp&width=800",
-            },
-            {
-              name: "Intel",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F996e70ded31f47c0ad70d8d408240e3e?format=webp&width=800",
-            },
-            {
-              name: "Bosch",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F9c77ee4533c644ab8f645e74e4f5aeaf?format=webp&width=800",
-            },
-            {
-              name: "Ford",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F9b867ed044cb4aa085cf221997f72ba8?format=webp&width=800",
-            },
-            {
-              name: "Thermo Fisher Scientific",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Fb473361533db46029fe8b7f3fc44f72a?format=webp&width=800",
-            },
-            {
-              name: "AMD",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Fb643fb8d25fb44678335e1d7ba418785?format=webp&width=800",
-            },
-            {
-              name: "Tech Mahindra",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Fb7a7a132b1ad476a9b2f284c78b16c73?format=webp&width=800",
-            },
-            {
-              name: "OnePlus",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F59a2e39f5e6a4c40a41d63ccc182a06c?format=webp&width=800",
-            },
-          ].map((client) => (
-            <motion.div
-              key={client.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8, boxShadow: "0 24px 48px rgba(0,0,0,0.15)" }}
-              transition={{ duration: 0.5 }}
-              className="relative rounded-2xl border border-primary/20 p-8 flex flex-col items-center justify-center min-h-48 bg-gradient-to-br from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all duration-300 group overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative flex items-center justify-center h-full w-full">
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="max-h-20 max-w-[90%] object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0"
-                />
+        <div className="marquee-container">
+          <div className="marquee-content animate-marquee">
+            {[
+              {
+                name: "Qualcomm",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Febf2ef164d994b569d71f886ae6009ac?format=webp&width=800",
+                size: "max-h-16",
+              },
+              {
+                name: "Intel",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F1fe0861a53234f258ae05b386a218919?format=webp&width=800",
+                size: "max-h-16",
+              },
+              {
+                name: "Bosch",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fd561fc3109de4576ab82554c59cbf464?format=webp&width=800",
+                size: "max-h-16",
+              },
+              {
+                name: "Ford",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4ba3011410274053ae9c2ac7560f311a?format=webp&width=800",
+                size: "max-h-16",
+              },
+              {
+                name: "Thermo Fisher Scientific",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fc33c02f95c7e4e5a9dafd9e8f214ac20?format=webp&width=800",
+                size: "max-h-24",
+              },
+              {
+                name: "AMD",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fb04649cc615a496a856fe43a6b580976?format=webp&width=800",
+                size: "max-h-24",
+              },
+              {
+                name: "Tech Mahindra",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4a8685ebce2c4f1784f5b8bb8245e7ce?format=webp&width=800",
+                size: "max-h-24",
+              },
+              {
+                name: "OnePlus",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F0e0f616b739c44a594f103a1b958f321?format=webp&width=800",
+                size: "max-h-24",
+              },
+              {
+                name: "Qualcomm",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Febf2ef164d994b569d71f886ae6009ac?format=webp&width=800",
+                size: "max-h-16",
+              },
+              {
+                name: "Intel",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F1fe0861a53234f258ae05b386a218919?format=webp&width=800",
+                size: "max-h-16",
+              },
+            ].map((client, idx) => (
+              <div
+                key={`${client.name}-${idx}`}
+                className="relative rounded-2xl border border-primary/20 p-6 flex flex-col items-center justify-center min-h-40 min-w-40 bg-gradient-to-br from-primary/5 to-accent/5 transition-all duration-300 group overflow-hidden flex-shrink-0"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-center justify-center h-full w-full">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    loading="lazy"
+                    decoding="async"
+                    className={`${client.size} max-w-[85%] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300`}
+                  />
+                </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </Section>
 
