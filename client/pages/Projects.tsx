@@ -527,62 +527,102 @@ function ProjectCard({
   project,
   isSelected,
   onSelect,
+  index = 0,
 }: {
   project: (typeof projects)[0];
   isSelected: boolean;
   onSelect: () => void;
+  index?: number;
 }) {
   return (
     <motion.button
       onClick={onSelect}
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -6, boxShadow: "0 12px 32px rgba(0,0,0,0.15)" }}
-      transition={{ duration: 0.4 }}
-      className={`relative overflow-hidden rounded-2xl border text-left transition-all flex flex-col h-full ${
+      whileHover={{ y: -10, boxShadow: "0 24px 48px rgba(0,0,0,0.2)" }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`relative overflow-hidden rounded-2xl border text-left transition-all flex flex-col h-full group ${
         isSelected
-          ? "ring-2 ring-primary shadow-xl bg-primary/5"
-          : "hover:shadow-lg bg-card/40"
+          ? "ring-2 ring-primary shadow-xl bg-primary/5 border-primary/40"
+          : "border-primary/15 hover:shadow-lg hover:border-primary/40 bg-card/40"
       }`}
     >
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative h-48 w-full overflow-hidden bg-secondary/50 flex-shrink-0">
-        <img
+        <motion.img
           src={project.image}
           alt={project.title}
           loading="lazy"
           decoding="async"
           className="w-full h-full object-cover"
+          whileHover={{ scale: 1.08 }}
+          transition={{ duration: 0.4 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"
+          whileHover={{ from: "rgba(0,0,0,0.7)", via: "transparent", to: "transparent" }}
+        />
       </div>
 
-      <div className="flex flex-col justify-between flex-1 p-5 md:p-6">
+      <div className="flex flex-col justify-between flex-1 p-5 md:p-6 relative">
         <div>
-          <div className="flex items-start gap-3 mb-3">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground flex-shrink-0 shadow-md">
+          <motion.div
+            className="flex items-start gap-3 mb-3"
+            whileHover={{ x: 4 }}
+            transition={{ duration: 0.2 }}
+          >
+            <motion.span
+              className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground flex-shrink-0 shadow-md"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ duration: 0.3 }}
+            >
               {project.icon}
-            </span>
+            </motion.span>
             <div className="flex-1 min-w-0">
-              <div className="text-xs font-bold text-primary/90 uppercase tracking-wide">
+              <motion.div
+                className="text-xs font-bold text-primary/90 uppercase tracking-wide"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 + 0.1 }}
+              >
                 {project.category}
-              </div>
-              <h3 className="font-bold text-foreground text-base mt-1 line-clamp-2">
+              </motion.div>
+              <motion.h3
+                className="font-bold text-foreground text-base mt-1 line-clamp-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 + 0.15 }}
+              >
                 {project.title}
-              </h3>
+              </motion.h3>
             </div>
-          </div>
-          <p className="text-sm text-foreground/75 leading-relaxed mb-4 line-clamp-2">
+          </motion.div>
+          <motion.p
+            className="text-sm text-foreground/75 leading-relaxed mb-4 line-clamp-2"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+          >
             {project.shortDesc}
-          </p>
+          </motion.p>
         </div>
 
         <motion.div
           className="inline-flex items-center gap-1 w-fit rounded-lg bg-gradient-to-r from-primary/20 to-accent/20 px-3 py-1.5 text-xs font-bold text-primary border border-primary/30 hover:border-primary/60 transition-all"
-          whileHover={{ x: 2 }}
+          whileHover={{ x: 4, boxShadow: "0 4px 12px rgba(var(--primary-rgb), 0.2)" }}
+          whileTap={{ scale: 0.95 }}
         >
           <span>View Details</span>
-          <span className="transition-transform">→</span>
+          <motion.span
+            className="transition-transform"
+            whileHover={{ x: 3 }}
+          >
+            →
+          </motion.span>
         </motion.div>
       </div>
     </motion.button>
