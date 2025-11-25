@@ -84,12 +84,21 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-            Contact
+          <div className="mb-2">
+            <motion.span
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 border border-primary/30 text-sm font-semibold text-primary mb-4"
+            >
+              Get In Touch
+            </motion.span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent tracking-tight">
+            Let's Build Something Great
           </h1>
-          <p className="mt-3 text-muted-foreground max-w-2xl">
-            Tell us about your project or resource needs. Our leadership team
-            will respond promptly.
+          <p className="mt-4 text-lg text-foreground/70 max-w-2xl leading-relaxed font-medium">
+            Tell us about your project or resource needs. Our leadership team will respond promptly and work with you to find the perfect solution.
           </p>
         </motion.div>
 
