@@ -32,7 +32,10 @@ export default function Software() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Software is the intelligence inside devices. We write firmware that controls hardware, operating systems that make things run smoothly, and applications that users interact with. Our software is optimized for speed, efficiency, and reliability.
+          Software is the intelligence inside devices. We write firmware that
+          controls hardware, operating systems that make things run smoothly,
+          and applications that users interact with. Our software is optimized
+          for speed, efficiency, and reliability.
         </p>
       </Section>
 
@@ -81,18 +84,34 @@ export default function Software() {
 
       {/* Software Layers */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Software Architecture</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Software Architecture
+        </h2>
         <div className="grid gap-6 md:grid-cols-4">
-          <LayerBox layer="Applications" desc="User-facing software and services" />
-          <LayerBox layer="Middleware" desc="Services connecting apps to hardware" />
-          <LayerBox layer="OS & Drivers" desc="Operating system and device control" />
-          <LayerBox layer="Firmware" desc="Closest to hardware, controls everything" />
+          <LayerBox
+            layer="Applications"
+            desc="User-facing software and services"
+          />
+          <LayerBox
+            layer="Middleware"
+            desc="Services connecting apps to hardware"
+          />
+          <LayerBox
+            layer="OS & Drivers"
+            desc="Operating system and device control"
+          />
+          <LayerBox
+            layer="Firmware"
+            desc="Closest to hardware, controls everything"
+          />
         </div>
       </Section>
 
       {/* Development Approach */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">How We Develop Software</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          How We Develop Software
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ApproachBox
             title="Quality & Reliability"
@@ -117,7 +136,9 @@ export default function Software() {
 
       {/* Technologies */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Technology Stack</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Technology Stack
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <TechCard
             title="Languages & Tools"
@@ -152,9 +173,12 @@ export default function Software() {
       {/* CTA */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Expert Software Development?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Need Expert Software Development?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our software engineers are ready to create intelligent, efficient, and secure device software.
+            Our software engineers are ready to create intelligent, efficient,
+            and secure device software.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

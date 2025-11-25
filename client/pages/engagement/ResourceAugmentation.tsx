@@ -2,7 +2,14 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import DomainHero from "@/components/DomainHero";
-import { Users, Zap, BarChart3, Clock, Lightbulb, CheckCircle2 } from "lucide-react";
+import {
+  Users,
+  Zap,
+  BarChart3,
+  Clock,
+  Lightbulb,
+  CheckCircle2,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 import { AnimatedCard } from "@/components/AnimatedCard";
@@ -29,9 +36,14 @@ export default function ResourceAugmentation() {
 
       {/* Overview */}
       <Section container>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">What Is This Model?</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          What Is This Model?
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          You need more hands. We provide skilled engineers who join your team and work on your projects. They integrate with your team, follow your processes, and contribute their expertise. Perfect for scaling capacity or getting specific expertise quickly.
+          You need more hands. We provide skilled engineers who join your team
+          and work on your projects. They integrate with your team, follow your
+          processes, and contribute their expertise. Perfect for scaling
+          capacity or getting specific expertise quickly.
         </p>
       </Section>
 
@@ -39,10 +51,26 @@ export default function ResourceAugmentation() {
       <Section className="bg-secondary/40">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">Best For</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <UseCase icon="👥" title="Scaling Teams" desc="Need more engineers for a period" />
-          <UseCase icon="🎯" title="Specific Expertise" desc="Need specialists for key areas" />
-          <UseCase icon="⏱️" title="Flexible Duration" desc="Short-term or long-term flexibility" />
-          <UseCase icon="📈" title="Quick Ramp-Up" desc="Get started within days" />
+          <UseCase
+            icon="👥"
+            title="Scaling Teams"
+            desc="Need more engineers for a period"
+          />
+          <UseCase
+            icon="🎯"
+            title="Specific Expertise"
+            desc="Need specialists for key areas"
+          />
+          <UseCase
+            icon="⏱️"
+            title="Flexible Duration"
+            desc="Short-term or long-term flexibility"
+          />
+          <UseCase
+            icon="📈"
+            title="Quick Ramp-Up"
+            desc="Get started within days"
+          />
         </div>
       </Section>
 
@@ -80,7 +108,9 @@ export default function ResourceAugmentation() {
 
       {/* Flexibility */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Ultimate Flexibility</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Ultimate Flexibility
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <FlexibilityOption
             title="Duration"
@@ -99,7 +129,9 @@ export default function ResourceAugmentation() {
 
       {/* Types of Resources */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Types of Resources</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Types of Resources
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ResourceBox
             title="Technical Specialists"
@@ -151,7 +183,9 @@ export default function ResourceAugmentation() {
 
       {/* Success Factors */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">For Maximum Success</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          For Maximum Success
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <SuccessFactor
             icon="🎯"
@@ -176,7 +210,8 @@ export default function ResourceAugmentation() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Scale Your Team?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss your needs and find the right engineers to augment your team.
+            Let's discuss your needs and find the right engineers to augment
+            your team.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Talk to Us</Link>
@@ -235,13 +270,7 @@ function ProcessStep({
   );
 }
 
-function FlexibilityOption({
-  title,
-  desc,
-}: {
-  title: string;
-  desc: string;
-}) {
+function FlexibilityOption({ title, desc }: { title: string; desc: string }) {
   return (
     <AnimatedCard variant="hover-lift">
       <h3 className="font-semibold mb-2">{title}</h3>

@@ -32,7 +32,10 @@ export default function HandheldIot() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our Handheld & IoT team specializes in creating smart devices that people carry with them every day. From Android phones to smartwatches, fitness trackers to smart home devices, we design devices that are intuitive, responsive, and reliable.
+          Our Handheld & IoT team specializes in creating smart devices that
+          people carry with them every day. From Android phones to smartwatches,
+          fitness trackers to smart home devices, we design devices that are
+          intuitive, responsive, and reliable.
         </p>
       </Section>
 
@@ -81,7 +84,9 @@ export default function HandheldIot() {
 
       {/* Use Cases */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Real-World Examples</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Real-World Examples
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ExampleCard
             title="Fitness Wearables"
@@ -108,7 +113,13 @@ export default function HandheldIot() {
         <div className="grid gap-6 md:grid-cols-3">
           <TechCard
             title="Platforms We Support"
-            items={["Android", "Bluetooth", "WiFi 6E", "Cellular LTE/5G", "Edge AI"]}
+            items={[
+              "Android",
+              "Bluetooth",
+              "WiFi 6E",
+              "Cellular LTE/5G",
+              "Edge AI",
+            ]}
           />
           <TechCard
             title="Key Focus Areas"
@@ -135,9 +146,13 @@ export default function HandheldIot() {
 
       {/* Team Expertise */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Team's Expertise</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Our Team's Expertise
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our specialists have years of experience with major consumer device brands. They understand what makes devices successful - from hardware that doesn't overheat to software that's snappy and responsive.
+          Our specialists have years of experience with major consumer device
+          brands. They understand what makes devices successful - from hardware
+          that doesn't overheat to software that's snappy and responsive.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           <ExpertiseBox
@@ -164,9 +179,12 @@ export default function HandheldIot() {
       {/* CTA */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Smart Devices?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Build Smart Devices?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our Handheld & IoT team is ready to help you create the next generation of smart devices.
+            Our Handheld & IoT team is ready to help you create the next
+            generation of smart devices.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

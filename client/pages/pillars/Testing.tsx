@@ -2,7 +2,14 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import DomainHero from "@/components/DomainHero";
-import { CheckCircle, Zap, BarChart3, Shield, Wrench, Target } from "lucide-react";
+import {
+  CheckCircle,
+  Zap,
+  BarChart3,
+  Shield,
+  Wrench,
+  Target,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 import { CheckCircle2 } from "lucide-react";
@@ -32,7 +39,10 @@ export default function Testing() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Testing is crucial. We don't just check if things work - we verify they work perfectly under all conditions. We run automated tests, stress test devices, check for compliance, and ensure reliability before devices reach customers.
+          Testing is crucial. We don't just check if things work - we verify
+          they work perfectly under all conditions. We run automated tests,
+          stress test devices, check for compliance, and ensure reliability
+          before devices reach customers.
         </p>
       </Section>
 
@@ -87,7 +97,10 @@ export default function Testing() {
             level="Unit Tests"
             desc="Testing individual pieces of code in isolation"
           />
-          <TestLevel level="Integration Tests" desc="Testing how components work together" />
+          <TestLevel
+            level="Integration Tests"
+            desc="Testing how components work together"
+          />
           <TestLevel
             level="System Tests"
             desc="Testing the complete device as a whole"
@@ -101,7 +114,9 @@ export default function Testing() {
 
       {/* Testing Approach */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Testing Philosophy</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Our Testing Philosophy
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ApproachBox
             title="Comprehensive Coverage"
@@ -126,7 +141,9 @@ export default function Testing() {
 
       {/* Tools & Lab */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Testing Equipment & Tools</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Testing Equipment & Tools
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <ToolCard
             title="Hardware Lab"
@@ -163,7 +180,8 @@ export default function Testing() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Need Expert QA & Testing?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our testing experts ensure your devices are reliable, compliant, and perform flawlessly.
+            Our testing experts ensure your devices are reliable, compliant, and
+            perform flawlessly.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

@@ -32,7 +32,10 @@ export default function Support() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Support means more than just answering questions. We provide hands-on training, troubleshoot complex problems, augment your teams with skilled engineers, and provide guidance throughout your project lifecycle.
+          Support means more than just answering questions. We provide hands-on
+          training, troubleshoot complex problems, augment your teams with
+          skilled engineers, and provide guidance throughout your project
+          lifecycle.
         </p>
       </Section>
 
@@ -81,7 +84,9 @@ export default function Support() {
 
       {/* Support Models */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">How We Support You</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          How We Support You
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <SupportModel
             title="Onsite Engineers"
@@ -127,9 +132,13 @@ export default function Support() {
 
       {/* Engagement Flexibility */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Flexible Engagement</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Flexible Engagement
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Every project is different. We adjust our support model to match your needs - whether you need a few hours of consultation, an engineer for several months, or long-term strategic guidance.
+          Every project is different. We adjust our support model to match your
+          needs - whether you need a few hours of consultation, an engineer for
+          several months, or long-term strategic guidance.
         </p>
         <div className="grid gap-6 md:grid-cols-3">
           <EngagementOption
@@ -149,7 +158,9 @@ export default function Support() {
 
       {/* Why Choose Us */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Why Partner With Us</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Why Partner With Us
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <BenefitBox
             title="Experienced Team"
@@ -177,7 +188,8 @@ export default function Support() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Need Expert Support?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our support team is ready to help you succeed with training, guidance, and skilled engineers.
+            Our support team is ready to help you succeed with training,
+            guidance, and skilled engineers.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Get in Touch</Link>
@@ -218,13 +230,7 @@ function CapabilityCard({
   );
 }
 
-function SupportModel({
-  title,
-  desc,
-}: {
-  title: string;
-  desc: string;
-}) {
+function SupportModel({ title, desc }: { title: string; desc: string }) {
   return (
     <AnimatedCard variant="default">
       <div className="text-center">

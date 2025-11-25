@@ -32,7 +32,9 @@ export default function AutomotiveTeam() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our Automotive team specializes in vehicle electronics and software. We design the systems that control engines, manage safety, enable navigation, and make vehicles connected and intelligent.
+          Our Automotive team specializes in vehicle electronics and software.
+          We design the systems that control engines, manage safety, enable
+          navigation, and make vehicles connected and intelligent.
         </p>
       </Section>
 
@@ -81,7 +83,9 @@ export default function AutomotiveTeam() {
 
       {/* Use Cases */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Real-World Examples</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Real-World Examples
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ExampleCard
             title="Smart Engine Management"
@@ -104,7 +108,9 @@ export default function AutomotiveTeam() {
 
       {/* Technologies */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">How We Ensure Quality</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          How We Ensure Quality
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <TechCard
             title="Safety & Standards"
@@ -141,9 +147,13 @@ export default function AutomotiveTeam() {
 
       {/* Team Expertise */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Team's Expertise</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Our Team's Expertise
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our automotive engineers have experience with major car manufacturers. They understand vehicle architecture, safety requirements, and the precision needed for mission-critical systems.
+          Our automotive engineers have experience with major car manufacturers.
+          They understand vehicle architecture, safety requirements, and the
+          precision needed for mission-critical systems.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           <ExpertiseBox
@@ -170,9 +180,12 @@ export default function AutomotiveTeam() {
       {/* CTA */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Smarter Vehicles?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Build Smarter Vehicles?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our Automotive team is ready to help you create the next generation of intelligent, safe, and connected vehicles.
+            Our Automotive team is ready to help you create the next generation
+            of intelligent, safe, and connected vehicles.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

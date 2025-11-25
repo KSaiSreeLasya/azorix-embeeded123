@@ -32,7 +32,10 @@ export default function Product() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Product design is the foundation of every hardware project. We design circuits, layout circuit boards, select components, and prepare for manufacturing. Our goal: devices that work every time, under all conditions.
+          Product design is the foundation of every hardware project. We design
+          circuits, layout circuit boards, select components, and prepare for
+          manufacturing. Our goal: devices that work every time, under all
+          conditions.
         </p>
       </Section>
 
@@ -81,18 +84,38 @@ export default function Product() {
 
       {/* Process */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Design Process</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Our Design Process
+        </h2>
         <div className="grid gap-6 md:grid-cols-4">
-          <ProcessStep step="1" title="Requirements" desc="Understanding what the device needs to do" />
-          <ProcessStep step="2" title="Design" desc="Creating schematics and selecting components" />
-          <ProcessStep step="3" title="Prototype" desc="Building and testing physical boards" />
-          <ProcessStep step="4" title="Production" desc="Preparing for manufacturing at scale" />
+          <ProcessStep
+            step="1"
+            title="Requirements"
+            desc="Understanding what the device needs to do"
+          />
+          <ProcessStep
+            step="2"
+            title="Design"
+            desc="Creating schematics and selecting components"
+          />
+          <ProcessStep
+            step="3"
+            title="Prototype"
+            desc="Building and testing physical boards"
+          />
+          <ProcessStep
+            step="4"
+            title="Production"
+            desc="Preparing for manufacturing at scale"
+          />
         </div>
       </Section>
 
       {/* Key Focus */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">What Makes Us Different</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          What Makes Us Different
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <FocusBox
             title="Reliability First"
@@ -117,7 +140,9 @@ export default function Product() {
 
       {/* Technologies */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Tools & Technologies</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Tools & Technologies
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <TechCard
             title="Design Tools"
@@ -155,9 +180,12 @@ export default function Product() {
       {/* CTA */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Expert Hardware Design?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Need Expert Hardware Design?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our product design experts are ready to help you create reliable, manufacturable hardware.
+            Our product design experts are ready to help you create reliable,
+            manufacturable hardware.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

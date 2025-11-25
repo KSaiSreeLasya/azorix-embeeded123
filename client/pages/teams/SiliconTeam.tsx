@@ -32,7 +32,10 @@ export default function SiliconTeam() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our Silicon & SoC team specializes in chip enablement. We take brand new processors from manufacturers and prepare them for real-world use - writing the firmware, drivers, and software that unlock their full potential.
+          Our Silicon & SoC team specializes in chip enablement. We take brand
+          new processors from manufacturers and prepare them for real-world use
+          - writing the firmware, drivers, and software that unlock their full
+          potential.
         </p>
       </Section>
 
@@ -81,7 +84,9 @@ export default function SiliconTeam() {
 
       {/* Use Cases */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Real-World Examples</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Real-World Examples
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ExampleCard
             title="Processor Launch Support"
@@ -141,9 +146,13 @@ export default function SiliconTeam() {
 
       {/* Team Expertise */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Team's Expertise</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Our Team's Expertise
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our silicon team has experience with every major processor manufacturer. They understand chip architectures, kernel optimization, and how to squeeze maximum performance from new silicon.
+          Our silicon team has experience with every major processor
+          manufacturer. They understand chip architectures, kernel optimization,
+          and how to squeeze maximum performance from new silicon.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           <ExpertiseBox
@@ -170,9 +179,12 @@ export default function SiliconTeam() {
       {/* CTA */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Enable New Silicon?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Enable New Silicon?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our Silicon & SoC team is ready to help you bring new processors to market quickly and efficiently.
+            Our Silicon & SoC team is ready to help you bring new processors to
+            market quickly and efficiently.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

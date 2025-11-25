@@ -2,7 +2,14 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import DomainHero from "@/components/DomainHero";
-import { Stethoscope, Heart, Shield, Zap, TestTube, BarChart3 } from "lucide-react";
+import {
+  Stethoscope,
+  Heart,
+  Shield,
+  Zap,
+  TestTube,
+  BarChart3,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 import { CheckCircle2 } from "lucide-react";
@@ -32,7 +39,10 @@ export default function MedicalDevices() {
       <Section container>
         <h2 className="text-2xl md:text-3xl font-bold mb-8">What We Do</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our Medical Devices team specializes in healthcare technology. We build devices that doctors trust and patients rely on. Every device meets strict FDA safety requirements and is designed with the patient's wellbeing as our top priority.
+          Our Medical Devices team specializes in healthcare technology. We
+          build devices that doctors trust and patients rely on. Every device
+          meets strict FDA safety requirements and is designed with the
+          patient's wellbeing as our top priority.
         </p>
       </Section>
 
@@ -81,7 +91,9 @@ export default function MedicalDevices() {
 
       {/* Use Cases */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Real-World Examples</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Real-World Examples
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <ExampleCard
             title="Heart Monitors"
@@ -104,7 +116,9 @@ export default function MedicalDevices() {
 
       {/* Technologies */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">How We Ensure Quality</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          How We Ensure Quality
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <TechCard
             title="Safety & Compliance"
@@ -141,9 +155,13 @@ export default function MedicalDevices() {
 
       {/* Team Expertise */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Team's Expertise</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Our Team's Expertise
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          Our team includes engineers who have worked on life-saving devices. They understand medical requirements, safety standards, and what it takes to get a device approved by regulatory bodies.
+          Our team includes engineers who have worked on life-saving devices.
+          They understand medical requirements, safety standards, and what it
+          takes to get a device approved by regulatory bodies.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           <ExpertiseBox
@@ -172,7 +190,8 @@ export default function MedicalDevices() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Save Lives?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our Medical Devices team is ready to help you bring your healthcare innovation to market safely and efficiently.
+            Our Medical Devices team is ready to help you bring your healthcare
+            innovation to market safely and efficiently.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Start Your Project</Link>

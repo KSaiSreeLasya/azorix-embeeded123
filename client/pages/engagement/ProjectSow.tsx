@@ -2,7 +2,14 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import DomainHero from "@/components/DomainHero";
-import { Target, FileCheck, Calendar, DollarSign, CheckCircle2, TrendingUp } from "lucide-react";
+import {
+  Target,
+  FileCheck,
+  Calendar,
+  DollarSign,
+  CheckCircle2,
+  TrendingUp,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 import { AnimatedCard } from "@/components/AnimatedCard";
@@ -29,9 +36,13 @@ export default function ProjectSow() {
 
       {/* Overview */}
       <Section container>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">What Is This Model?</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          What Is This Model?
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          You define what needs to be built. We estimate the effort, agree on a timeline and budget, and deliver the complete solution. This works great when requirements are clear and the scope is well-defined.
+          You define what needs to be built. We estimate the effort, agree on a
+          timeline and budget, and deliver the complete solution. This works
+          great when requirements are clear and the scope is well-defined.
         </p>
       </Section>
 
@@ -39,10 +50,26 @@ export default function ProjectSow() {
       <Section className="bg-secondary/40">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">Best For</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <UseCase icon="✓" title="Specific Features" desc="Building one or more well-defined features" />
-          <UseCase icon="✓" title="Complete Products" desc="Delivering an entire product or device" />
-          <UseCase icon="✓" title="Fixed Budget" desc="When you have a specific budget in mind" />
-          <UseCase icon="✓" title="Clear Requirements" desc="When requirements are well understood" />
+          <UseCase
+            icon="✓"
+            title="Specific Features"
+            desc="Building one or more well-defined features"
+          />
+          <UseCase
+            icon="✓"
+            title="Complete Products"
+            desc="Delivering an entire product or device"
+          />
+          <UseCase
+            icon="✓"
+            title="Fixed Budget"
+            desc="When you have a specific budget in mind"
+          />
+          <UseCase
+            icon="✓"
+            title="Clear Requirements"
+            desc="When requirements are well understood"
+          />
         </div>
       </Section>
 
@@ -132,7 +159,9 @@ export default function ProjectSow() {
 
       {/* Success Metrics */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Success Criteria</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Success Criteria
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <SuccessMetric
             icon="📅"
@@ -155,9 +184,12 @@ export default function ProjectSow() {
       {/* CTA */}
       <Section className="bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Start Your Project?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss your requirements and create a plan for successful delivery.
+            Let's discuss your requirements and create a plan for successful
+            delivery.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Request a Quote</Link>
