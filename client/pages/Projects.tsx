@@ -460,11 +460,25 @@ export default function Projects() {
                   "Assembly and quality control",
                   "Help clients launch products",
                   "Ongoing technical support",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                ].map((item, idx) => (
+                  <motion.li
+                    key={item}
+                    className="flex items-start gap-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: idx * 0.04 }}
+                  >
+                    <motion.span
+                      className="h-4 w-4 text-primary mt-0.5 flex-shrink-0"
+                      whileInView={{ scale: [0, 1.2, 1] }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: idx * 0.04 + 0.1 }}
+                    >
+                      <CheckCircle className="h-4 w-4" />
+                    </motion.span>
                     <span>{item}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
