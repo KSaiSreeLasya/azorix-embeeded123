@@ -607,22 +607,30 @@ export default function Index() {
 
       {/* CTA band */}
       <Section container>
-        <div className="rounded-xl border p-8 md:p-10 bg-gradient-to-r from-primary/10 to-transparent">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="relative overflow-hidden rounded-3xl border border-primary/30 p-10 md:p-16 bg-gradient-to-br from-primary/15 via-background to-accent/10 shadow-xl"
+        >
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+          <div className="absolute -bottom-32 -left-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+          <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div>
-              <h3 className="text-xl md:text-2xl font-bold">
+              <h3 className="text-2xl md:text-3xl font-black bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
                 Ready to build your next product?
               </h3>
-              <p className="text-muted-foreground mt-1">
+              <p className="text-foreground/65 mt-3 text-lg font-medium">
                 Collaborate with a dependable engineering partner with 25+ years
                 of expertise.
               </p>
             </div>
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="md:flex-shrink-0 h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
               <a href="/contact">Start a conversation</a>
             </Button>
           </div>
-        </div>
+        </motion.div>
       </Section>
 
       <SiteFooter />
