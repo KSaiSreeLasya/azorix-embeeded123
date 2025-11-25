@@ -390,10 +390,24 @@ export default function Index() {
 
       {/* Domains */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold">Domains</h2>
-        <p className="mt-2 text-foreground/80 max-w-3xl leading-relaxed mb-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-4xl font-black bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent"
+        >
+          Domains
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-4 text-lg text-foreground/70 max-w-3xl leading-relaxed mb-12 font-medium"
+        >
           Where we deliver the most impact across industries and technologies.
-        </p>
+        </motion.p>
         <div className="rounded-xl border bg-card/60 backdrop-blur p-4 md:p-6">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <DomainCard
@@ -475,7 +489,7 @@ export default function Index() {
             ]}
           />
           <IoTAppCard
-            title="🏙️ Smart City"
+            title="����️ Smart City"
             desc="Cities that work efficiently - traffic flows better, utilities use less energy"
             icon={<Globe className="h-6 w-6" />}
             examples={["Traffic management", "Energy saving", "Public safety"]}
