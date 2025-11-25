@@ -172,6 +172,26 @@ export default function Index() {
 
       {/* Quick links */}
       <Section>
+        <div className="text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-4xl font-black bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4"
+          >
+            Explore Our Expertise
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-lg text-foreground/70 max-w-2xl mx-auto font-medium"
+          >
+            Discover our capabilities, view our work, or get in touch with our team
+          </motion.p>
+        </div>
         <div className="grid gap-8 md:grid-cols-3">
           <LinkCard
             to="/capabilities"
