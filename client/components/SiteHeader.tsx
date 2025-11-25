@@ -43,7 +43,7 @@ export default function SiteHeader() {
         <div
           className={cn(
             "container flex items-center justify-between transition-all duration-300",
-            isScrolled ? "h-14" : "h-20",
+            isScrolled ? "h-14" : "h-24",
           )}
         >
           <div className="flex items-center gap-4">
@@ -51,13 +51,13 @@ export default function SiteHeader() {
               <BackButton className="hidden sm:inline-flex" />
             )}
             <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-              <span className="relative inline-flex max-w-md">
+              <span className="relative inline-flex max-w-xl">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F3b9a6b06591c4cdeb476566ddc00c0bc?format=webp&width=800"
                   alt="Azorix Embedded Logo"
                   className={cn(
                     "w-full h-auto object-contain dark:hidden group-hover:opacity-80 transition-all duration-300",
-                    isScrolled ? "max-h-10" : "max-h-16",
+                    isScrolled ? "max-h-10" : "max-h-20",
                   )}
                 />
                 <img
@@ -66,7 +66,7 @@ export default function SiteHeader() {
                   aria-hidden
                   className={cn(
                     "w-full h-auto object-contain hidden dark:inline-block group-hover:opacity-80 transition-all duration-300",
-                    isScrolled ? "max-h-10" : "max-h-16",
+                    isScrolled ? "max-h-10" : "max-h-20",
                   )}
                 />
               </span>
