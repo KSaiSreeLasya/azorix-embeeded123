@@ -168,7 +168,7 @@ export default function Automotive() {
           Comprehensive automotive testing and validation.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
-          <Card title="Hardware Testing">
+          <Card index={0} title="Hardware Testing">
             <ul className="space-y-2">
               {[
                 "CAN message analysis and validation",
@@ -177,15 +177,22 @@ export default function Automotive() {
                 "System integration testing",
                 "Environmental & stress testing",
                 "Compliance verification",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-2 text-sm">
+              ].map((t, idx) => (
+                <motion.li
+                  key={t}
+                  className="flex items-start gap-2 text-sm"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: idx * 0.05 }}
+                >
                   <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground">{t}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </Card>
-          <Card title="Functional Testing">
+          <Card index={1} title="Functional Testing">
             <ul className="space-y-2">
               {[
                 "Automated test case development",
@@ -194,11 +201,18 @@ export default function Automotive() {
                 "Regression testing",
                 "Performance benchmarking",
                 "Documentation & traceability",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-2 text-sm">
+              ].map((t, idx) => (
+                <motion.li
+                  key={t}
+                  className="flex items-start gap-2 text-sm"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: idx * 0.05 }}
+                >
                   <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground">{t}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </Card>
