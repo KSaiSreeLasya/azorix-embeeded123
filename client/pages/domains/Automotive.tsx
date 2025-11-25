@@ -336,21 +336,17 @@ function SoftwareCard({
 function Card({
   title,
   children,
+  index = 0,
 }: {
   title: string;
   children: React.ReactNode;
+  index?: number;
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur"
-    >
+    <AnimatedCard variant="default" index={index}>
       <h3 className="font-semibold text-foreground mb-4">{title}</h3>
       {children}
-    </motion.div>
+    </AnimatedCard>
   );
 }
 
