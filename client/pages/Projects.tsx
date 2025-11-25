@@ -71,7 +71,7 @@ const projects = [
     category: "Medical & Wearables",
     title: "Smart Blood Pressure Monitor",
     image:
-      "https://images.pexels.com/photos/8367747/pexels-photo-8367747.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://cdn.builder.io/api/v1/image/assets%2F5dae6ba816ad4ab6ab0be78111d8eb0a%2Fadc3cac24dc7454b9ccfbe05c69e723b?format=webp&width=800",
     icon: <Zap className="h-5 w-5" />,
     shortDesc:
       "Wireless monitor that sends blood pressure readings to your phone",
