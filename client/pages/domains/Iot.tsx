@@ -169,27 +169,36 @@ function CapabilityCard({
   icon,
   title,
   desc,
+  index = 0,
 }: {
   icon: React.ReactNode;
   title: string;
   desc: string;
+  index?: number;
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
+      whileHover={{ y: -8, boxShadow: "0 16px 40px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="rounded-lg border border-primary/15 p-6 bg-card/60 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-all group overflow-hidden"
     >
-      <div className="flex items-center gap-3 mb-3">
-        <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/15 text-primary">
-          {icon}
-        </span>
-        <h3 className="font-semibold">{title}</h3>
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <div className="flex items-center gap-3 mb-3">
+          <motion.span
+            className="grid h-10 w-10 place-items-center rounded-lg bg-primary/15 text-primary"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ duration: 0.3 }}
+          >
+            {icon}
+          </motion.span>
+          <h3 className="font-semibold text-foreground">{title}</h3>
+        </div>
+        <p className="text-sm text-muted-foreground">{desc}</p>
       </div>
-      <p className="text-sm text-muted-foreground">{desc}</p>
     </motion.div>
   );
 }
@@ -197,20 +206,26 @@ function CapabilityCard({
 function Card({
   title,
   children,
+  index = 0,
 }: {
   title: string;
   children: React.ReactNode;
+  index?: number;
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur"
+      whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="rounded-lg border border-primary/15 p-6 bg-card/60 backdrop-blur hover:border-primary/40 transition-all group overflow-hidden"
     >
-      <h3 className="font-semibold text-foreground mb-4">{title}</h3>
-      {children}
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <h3 className="font-semibold text-foreground mb-4">{title}</h3>
+        {children}
+      </div>
     </motion.div>
   );
 }
@@ -218,47 +233,64 @@ function Card({
 function PlatformCard({
   name,
   features,
+  index = 0,
 }: {
   name: string;
   features: string[];
+  index?: number;
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-5 bg-card/60 backdrop-blur hover:shadow-md transition-all"
+      whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="rounded-lg border border-primary/15 p-5 bg-card/60 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-all group overflow-hidden"
     >
-      <h4 className="font-semibold text-foreground mb-3">{name}</h4>
-      <ul className="space-y-1">
-        {features.map((f) => (
-          <li
-            key={f}
-            className="flex items-center gap-2 text-xs text-muted-foreground"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            {f}
-          </li>
-        ))}
-      </ul>
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <h4 className="font-semibold text-foreground mb-3">{name}</h4>
+        <ul className="space-y-1">
+          {features.map((f, idx) => (
+            <motion.li
+              key={f}
+              className="flex items-center gap-2 text-xs text-muted-foreground"
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
+            >
+              <motion.span
+                className="h-1.5 w-1.5 rounded-full bg-primary"
+                whileInView={{ scale: [0, 1.2, 1] }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 + 0.1 }}
+              />
+              {f}
+            </motion.li>
+          ))}
+        </ul>
+      </div>
     </motion.div>
   );
 }
 
-function ApplicationCard({ title, desc }: { title: string; desc: string }) {
+function ApplicationCard({ title, desc, index = 0 }: { title: string; desc: string; index?: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
+      whileHover={{ y: -8, boxShadow: "0 16px 40px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="rounded-lg border border-primary/15 p-6 bg-card/60 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-all group overflow-hidden"
     >
-      <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{desc}</p>
+      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <h3 className="font-semibold text-foreground mb-2">{title}</h3>
+        <p className="text-sm text-muted-foreground">{desc}</p>
+      </div>
     </motion.div>
   );
 }
