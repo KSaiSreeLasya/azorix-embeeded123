@@ -170,7 +170,7 @@ const projects = [
     id: 8,
     category: "Automotive & Industrial",
     title: "Smart Water Purification System",
-    image: "https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg",
+    image: "https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <Cpu className="h-5 w-5" />,
     shortDesc: "Industrial water system that monitors quality and alerts about maintenance",
     realWorldUse: "Hospitals, industrial facilities, and commercial buildings use this to ensure water quality, track consumption, and get alerts before problems occur.",
