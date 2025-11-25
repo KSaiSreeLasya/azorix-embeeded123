@@ -65,6 +65,8 @@ function AppRoutes() {
           <Route path="/capabilities" element={<Capabilities />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
 
           {/* Domain Routes */}
           <Route path="/domains/iot" element={<Iot />} />
