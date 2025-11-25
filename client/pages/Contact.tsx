@@ -310,10 +310,11 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.45 }}
+            className="flex items-center gap-4 pt-2"
           >
             <Button
               type="submit"
-              className="w-full md:w-fit h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
+              className="h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
               disabled={isLoading}
             >
               {isLoading ? (
@@ -324,9 +325,18 @@ export default function Contact() {
                   Sending...
                 </motion.span>
               ) : (
-                "Send message"
+                "Send Message"
               )}
             </Button>
+            <motion.p
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="text-sm text-foreground/60 font-medium"
+            >
+              We'll get back to you within 24 hours
+            </motion.p>
           </motion.div>
         </motion.form>
         <motion.div
