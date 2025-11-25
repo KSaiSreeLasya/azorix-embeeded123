@@ -34,53 +34,55 @@ export default function Index() {
 
       {/* Hero */}
       <Section container>
-        <div className="relative overflow-hidden rounded-2xl border bg-gradient-to-br from-teal-50 via-white to-emerald-50 dark:from-teal-950/30 dark:via-slate-950 dark:to-emerald-950/20">
-          <div className="grid gap-8 md:grid-cols-2 p-8 md:p-12 items-center">
+        <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5 dark:from-primary/10 dark:via-background dark:to-accent/10">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
+            <div className="absolute -bottom-32 -left-40 h-64 w-64 rounded-full bg-accent/5 blur-3xl" />
+          </div>
+          <div className="relative grid gap-12 md:grid-cols-2 p-8 md:p-16 items-center">
             <div>
               <motion.p
-                initial={{ opacity: 0, y: -8 }}
+                initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="text-sm font-semibold text-primary"
+                transition={{ duration: 0.5 }}
+                className="text-xs md:text-sm font-semibold uppercase tracking-widest text-primary"
               >
                 Engineering & Design Services
               </motion.p>
               <motion.h1
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="mt-2 pb-[20px] text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(16,185,129,0.15)]"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="mt-4 pb-4 text-5xl md:text-7xl font-black tracking-tighter bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent"
               >
                 Innovation. Quality. Reliability.
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="mt-4 text-base md:text-lg text-foreground/80 max-w-xl leading-relaxed"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-6 text-lg md:text-xl text-foreground/70 max-w-lg leading-relaxed font-medium"
               >
-                Enabling global companies with product and engineering services.
-                Start-to-finish embedded systems expertise across hardware,
-                software, testing, and support.
+                Enabling global companies with product and engineering services. Start-to-finish embedded systems expertise across hardware, software, testing, and support.
               </motion.p>
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="mt-6 flex flex-wrap gap-3"
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mt-8 flex flex-wrap gap-4"
               >
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="h-12 px-8 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
                   <a href="/contact">Get Started</a>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base font-semibold rounded-lg border-2 hover:border-primary">
                   <a href="/capabilities">Explore Capabilities</a>
                 </Button>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="mt-6 flex flex-wrap gap-2"
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-8 flex flex-wrap gap-3"
               >
                 <Pill icon={<Wifi className="h-4 w-4" />}>IoT</Pill>
                 <Pill icon={<Stethoscope className="h-4 w-4" />}>Medical</Pill>
@@ -88,10 +90,10 @@ export default function Index() {
                 <Pill icon={<Cpu className="h-4 w-4" />}>SoC</Pill>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="mt-8 grid grid-cols-3 gap-4 text-center"
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mt-10 grid grid-cols-3 gap-4"
               >
                 <Stat kpi="25+" label="Years Experience" />
                 <Stat kpi="80+" label="Team Engineers" />
@@ -99,18 +101,19 @@ export default function Index() {
               </motion.div>
             </div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
+              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
               className="relative"
             >
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20" />
               <img
                 src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800"
                 alt="Embedded device PCB and components"
                 loading="eager"
                 fetchpriority="high"
                 decoding="async"
-                className="rounded-xl border shadow-lg object-cover w-full h-[240px] md:h-[320px] lg:h-[420px]"
+                className="relative rounded-2xl border-2 border-primary/30 shadow-2xl object-cover w-full h-[280px] md:h-[360px] lg:h-[480px]"
               />
             </motion.div>
           </div>
