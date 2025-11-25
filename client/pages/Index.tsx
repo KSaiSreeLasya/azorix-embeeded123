@@ -817,27 +817,34 @@ function ExpertiseCard({
   subtitle,
   desc,
   items,
+  index = 0,
 }: {
   icon: string;
   title: string;
   subtitle: string;
   desc: string;
   items: string[];
+  index?: number;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -6, boxShadow: "0 24px 48px rgba(0,0,0,0.12)" }}
-      transition={{ duration: 0.5 }}
-      className="relative rounded-2xl border border-primary/15 p-8 bg-gradient-to-br from-primary/5 via-background to-accent/5 backdrop-blur hover:shadow-xl transition-all group overflow-hidden"
+      whileHover={{ y: -8, boxShadow: "0 32px 64px rgba(0,0,0,0.15)" }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="relative rounded-2xl border border-primary/15 p-8 bg-gradient-to-br from-primary/5 via-background to-accent/5 backdrop-blur hover:shadow-xl hover:border-primary/40 transition-all group overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <motion.div className="absolute -bottom-10 -right-10 h-40 w-40 bg-gradient-to-tl from-primary/20 via-transparent to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative">
-        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+        <motion.div
+          className="text-5xl mb-4"
+          whileHover={{ scale: 1.15, rotate: -5 }}
+          transition={{ duration: 0.3 }}
+        >
           {icon}
-        </div>
+        </motion.div>
         <h3 className="font-bold text-2xl mb-2">{title}</h3>
         <p className="text-sm font-semibold text-primary/80 mb-4 uppercase tracking-wide">
           {subtitle}
@@ -846,11 +853,23 @@ function ExpertiseCard({
           {desc}
         </p>
         <ul className="space-y-3">
-          {items.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-sm">
-              <span className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accent mt-2 flex-shrink-0" />
+          {items.map((item, idx) => (
+            <motion.li
+              key={item}
+              className="flex items-start gap-3 text-sm"
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
+            >
+              <motion.span
+                className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accent mt-2 flex-shrink-0"
+                whileInView={{ scale: [0, 1.2, 1] }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 + 0.2 }}
+              />
               <span className="text-foreground/70 font-medium">{item}</span>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
