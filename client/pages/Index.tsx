@@ -651,25 +651,28 @@ function ExpertiseCard({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
+      whileHover={{ y: -6, boxShadow: "0 24px 48px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.5 }}
+      className="relative rounded-2xl border border-primary/15 p-8 bg-gradient-to-br from-primary/5 via-background to-accent/5 backdrop-blur hover:shadow-xl transition-all group overflow-hidden"
     >
-      <div className="text-4xl mb-2">{icon}</div>
-      <h3 className="font-bold text-lg">{title}</h3>
-      <p className="text-xs font-medium text-primary/70 mb-3">{subtitle}</p>
-      <p className="text-xs text-muted-foreground mb-4">{desc}</p>
-      <ul className="space-y-1.5">
-        {items.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-xs">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1 flex-shrink-0" />
-            <span className="text-muted-foreground">{item}</span>
-          </li>
-        ))}
-      </ul>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">{icon}</div>
+        <h3 className="font-bold text-2xl mb-2">{title}</h3>
+        <p className="text-sm font-semibold text-primary/80 mb-4 uppercase tracking-wide">{subtitle}</p>
+        <p className="text-base text-foreground/65 mb-6 leading-relaxed">{desc}</p>
+        <ul className="space-y-3">
+          {items.map((item) => (
+            <li key={item} className="flex items-start gap-3 text-sm">
+              <span className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accent mt-2 flex-shrink-0" />
+              <span className="text-foreground/70 font-medium">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </motion.div>
   );
 }
