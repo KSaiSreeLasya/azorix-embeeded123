@@ -307,6 +307,7 @@ export default function Capabilities() {
               "Work like your own team members",
               "We invest time in teaching your team",
             ]}
+            index={1}
           />
         </div>
       </Section>
