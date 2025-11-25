@@ -518,19 +518,24 @@ export default function Projects() {
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {clientLogos.map((logo) => (
+          {clientLogos.map((logo, idx) => (
             <motion.div
               key={logo.name}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 12, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -6, boxShadow: "0 12px 32px rgba(0,0,0,0.1)" }}
-              transition={{ duration: 0.4 }}
-              className={`rounded-lg border p-8 flex items-center justify-center min-h-32 bg-gradient-to-br ${logo.color} opacity-25 hover:opacity-40 transition-all cursor-default`}
+              whileHover={{ y: -8, boxShadow: "0 16px 40px rgba(0,0,0,0.15)" }}
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              className={`rounded-lg border border-primary/15 p-8 flex items-center justify-center min-h-32 bg-gradient-to-br ${logo.color} opacity-25 hover:opacity-40 transition-all cursor-default group overflow-hidden`}
             >
-              <span className="font-bold text-foreground text-center text-sm">
+              <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <motion.span
+                className="font-bold text-foreground text-center text-sm relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
                 {logo.name}
-              </span>
+              </motion.span>
             </motion.div>
           ))}
         </div>
