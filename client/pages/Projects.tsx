@@ -86,7 +86,7 @@ const projects = [
     id: 4,
     category: "IoT & Consumer",
     title: "Smart Home Controller (Dashpod)",
-    image: "https://images.pexels.com/photos/3062551/pexels-photo-3062551.jpeg",
+    image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <RadioIcon className="h-5 w-5" />,
     shortDesc: "Smart controller that detects motion and controls home devices",
     realWorldUse: "Smart home enthusiasts use this to automate their homes - automatically turning on lights when you enter a room, adjusting temperature, or triggering security alerts.",
