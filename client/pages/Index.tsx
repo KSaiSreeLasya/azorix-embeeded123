@@ -585,7 +585,11 @@ export default function Index() {
               title="🏙️ Smart City"
               desc="Cities that work efficiently - traffic flows better, utilities use less energy"
               icon={<Globe className="h-6 w-6" />}
-              examples={["Traffic management", "Energy saving", "Public safety"]}
+              examples={[
+                "Traffic management",
+                "Energy saving",
+                "Public safety",
+              ]}
               index={2}
             />
           </Link>

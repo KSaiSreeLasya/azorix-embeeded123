@@ -36,7 +36,9 @@ export default function AutomotiveIoT() {
 
       {/* Overview */}
       <Section container>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Connected Vehicles</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Connected Vehicles
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
           Modern vehicles are connected computers on wheels. They communicate
           with infrastructure, cloud services, and other cars. This enables
@@ -92,7 +94,9 @@ export default function AutomotiveIoT() {
 
       {/* Technology Stack */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Technology Stack</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Technology Stack
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <TechBox
             title="In-Vehicle Systems"

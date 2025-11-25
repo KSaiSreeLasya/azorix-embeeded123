@@ -40,11 +40,11 @@ export default function Bot() {
           What Is This Model?
         </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          You need capabilities developed and operational, but want to eventually
-          own them internally. We help you build the solution, run it while you
-          build your team's expertise, then transfer everything to your control.
-          Perfect for developing new capabilities or services that will become
-          core to your business.
+          You need capabilities developed and operational, but want to
+          eventually own them internally. We help you build the solution, run it
+          while you build your team's expertise, then transfer everything to
+          your control. Perfect for developing new capabilities or services that
+          will become core to your business.
         </p>
       </Section>
 

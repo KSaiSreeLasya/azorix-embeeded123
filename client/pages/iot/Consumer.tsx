@@ -36,7 +36,9 @@ export default function ConsumerIoT() {
 
       {/* Overview */}
       <Section container>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Connected Living</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Connected Living
+        </h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
           Consumer IoT devices are becoming part of everyday life. From
           smartwatches that track your health to speakers that play music and
@@ -126,7 +128,9 @@ export default function ConsumerIoT() {
 
       {/* Technology Trends */}
       <Section className="bg-secondary/40">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">What Makes It Work</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          What Makes It Work
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <TechCard
             title="Smart Hardware"

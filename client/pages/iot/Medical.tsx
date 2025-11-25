@@ -94,7 +94,9 @@ export default function MedicalIoT() {
 
       {/* Types of Devices */}
       <Section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Types of Devices</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          Types of Devices
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <DeviceBox
             title="Wearable Devices"
@@ -196,8 +198,8 @@ export default function MedicalIoT() {
       <Section className="bg-secondary/40">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Expertise</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          We've developed Medical IoT solutions from concept to FDA approval.
-          We understand sensor integration, medical data handling, regulatory
+          We've developed Medical IoT solutions from concept to FDA approval. We
+          understand sensor integration, medical data handling, regulatory
           requirements, and the importance of reliability in healthcare.
         </p>
         <div className="grid gap-6 md:grid-cols-2">

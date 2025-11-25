@@ -28,27 +28,41 @@ export default function SiteFooter() {
         <div>
           <div className="font-bold text-lg mb-4 text-foreground">Offices</div>
           <ul className="space-y-2 text-sm text-foreground/70">
-            <li className="hover:text-primary transition-colors">Troy, MI, USA</li>
-            <li className="hover:text-primary transition-colors">Hyderabad, India</li>
+            <li className="hover:text-primary transition-colors">
+              Troy, MI, USA
+            </li>
+            <li className="hover:text-primary transition-colors">
+              Hyderabad, India
+            </li>
           </ul>
         </div>
         <div>
           <div className="font-bold text-lg mb-4 text-foreground">Contact</div>
           <ul className="space-y-2 text-sm text-foreground/70">
-            <li className="hover:text-primary transition-colors">www.azorixembedded.com</li>
-            <li className="hover:text-primary transition-colors">info@azorixembedded.com</li>
+            <li className="hover:text-primary transition-colors">
+              www.azorixembedded.com
+            </li>
+            <li className="hover:text-primary transition-colors">
+              info@azorixembedded.com
+            </li>
           </ul>
         </div>
         <div>
           <div className="font-bold text-lg mb-4 text-foreground">Legal</div>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/privacy" className="text-foreground/70 hover:text-primary transition-colors font-medium">
+              <Link
+                to="/privacy"
+                className="text-foreground/70 hover:text-primary transition-colors font-medium"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="/terms" className="text-foreground/70 hover:text-primary transition-colors font-medium">
+              <Link
+                to="/terms"
+                className="text-foreground/70 hover:text-primary transition-colors font-medium"
+              >
                 Terms of Service
               </Link>
             </li>

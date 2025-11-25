@@ -554,10 +554,7 @@ export default function Projects() {
         </div>
         <div className="marquee-container">
           <div className="marquee-content animate-marquee">
-            {[
-              ...clientLogos,
-              ...clientLogos.slice(0, 2),
-            ].map((logo, idx) => (
+            {[...clientLogos, ...clientLogos.slice(0, 2)].map((logo, idx) => (
               <div
                 key={`${logo.name}-${idx}`}
                 className="relative rounded-2xl border border-primary/20 p-6 flex flex-col items-center justify-center min-h-40 min-w-40 bg-gradient-to-br from-primary/5 to-accent/5 transition-all duration-300 group overflow-hidden flex-shrink-0"

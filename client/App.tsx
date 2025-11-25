@@ -86,7 +86,10 @@ function AppRoutes() {
 
           {/* Engagement Models Routes */}
           <Route path="/engagement/project-sow" element={<ProjectSow />} />
-          <Route path="/engagement/resource-augmentation" element={<ResourceAugmentation />} />
+          <Route
+            path="/engagement/resource-augmentation"
+            element={<ResourceAugmentation />}
+          />
           <Route path="/engagement/bot" element={<Bot />} />
 
           {/* IoT Applications Routes */}

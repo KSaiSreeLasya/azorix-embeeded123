@@ -204,9 +204,9 @@ export default function SmartCity() {
       <Section className="bg-secondary/40">
         <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Expertise</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-          We design and implement smart city infrastructure. We understand sensor
-          networks, wireless connectivity, data integration, and the challenges
-          of managing large-scale IoT deployments across urban areas.
+          We design and implement smart city infrastructure. We understand
+          sensor networks, wireless connectivity, data integration, and the
+          challenges of managing large-scale IoT deployments across urban areas.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           <ExpertiseBox
