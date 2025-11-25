@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Section from "@/components/Section";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
-import { Package, Code2, LifeBuoy, CheckCircle2 } from "lucide-react";
+import { Package, Code2, CheckCircle2, Lightbulb, Zap, Shield, Users } from "lucide-react";
 
 export default function Capabilities() {
   return (
