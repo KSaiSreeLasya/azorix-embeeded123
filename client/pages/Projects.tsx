@@ -544,27 +544,29 @@ export default function Projects() {
             their embedded systems to life
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {clientLogos.map((logo, idx) => (
-            <motion.div
-              key={logo.name}
-              initial={{ opacity: 0, y: 12, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8, boxShadow: "0 16px 40px rgba(0,0,0,0.15)" }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className={`rounded-lg border border-primary/15 p-8 flex items-center justify-center min-h-32 bg-gradient-to-br ${logo.color} opacity-25 hover:opacity-40 transition-all cursor-default group overflow-hidden`}
-            >
-              <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <motion.span
-                className="font-bold text-foreground text-center text-sm relative"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
+        <div className="marquee-container">
+          <div className="marquee-content animate-marquee">
+            {[
+              ...clientLogos,
+              ...clientLogos.slice(0, 2),
+            ].map((logo, idx) => (
+              <div
+                key={`${logo.name}-${idx}`}
+                className="relative rounded-2xl border border-primary/20 p-6 flex flex-col items-center justify-center min-h-40 min-w-40 bg-gradient-to-br from-primary/5 to-accent/5 transition-all duration-300 group overflow-hidden flex-shrink-0"
               >
-                {logo.name}
-              </motion.span>
-            </motion.div>
-          ))}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-center justify-center h-full w-full">
+                  <img
+                    src={logo.logo}
+                    alt={logo.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-h-16 max-w-[85%] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
