@@ -570,20 +570,23 @@ function OverviewCard({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border bg-background/70 p-5 shadow-sm hover:shadow-md transition-all"
+      whileHover={{ y: -6, boxShadow: "0 24px 48px rgba(0,0,0,0.12)" }}
+      transition={{ duration: 0.5 }}
+      className="relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-7 shadow-lg hover:shadow-xl transition-all group overflow-hidden"
     >
-      <div className="flex items-center gap-2 font-semibold mb-2">
-        <span className="grid h-8 w-8 place-items-center rounded-md bg-primary/15 text-primary">
-          {icon}
-        </span>
-        {title}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <div className="flex items-center gap-3 font-bold mb-3 text-lg">
+          <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-md">
+            {icon}
+          </span>
+          {title}
+        </div>
+        <p className="text-base text-foreground/65 leading-relaxed">{desc}</p>
       </div>
-      <p className="text-sm text-muted-foreground">{desc}</p>
     </motion.div>
   );
 }
