@@ -119,16 +119,22 @@ export default function Index() {
               initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
               transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
-              className="relative"
+              whileHover={{ y: -8 }}
+              className="relative group"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20" />
+              <motion.div
+                className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
               <img
                 src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800"
                 alt="Embedded device PCB and components"
                 loading="eager"
                 fetchpriority="high"
                 decoding="async"
-                className="relative rounded-2xl border-2 border-primary/30 shadow-2xl object-cover w-full h-[280px] md:h-[360px] lg:h-[480px]"
+                className="relative rounded-2xl border-2 border-primary/30 shadow-2xl object-cover w-full h-[280px] md:h-[360px] lg:h-[480px] group-hover:border-primary/50 transition-all duration-300"
               />
             </motion.div>
           </div>
@@ -284,7 +290,7 @@ export default function Index() {
             ]}
           />
           <CoECard
-            emoji="🚗"
+            emoji="����"
             icon={<Car className="h-6 w-6" />}
             title="Automotive"
             highlight="Connected Vehicles"
