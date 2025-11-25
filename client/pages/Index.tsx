@@ -680,15 +680,18 @@ function ExpertiseCard({
 function EngagementCard({ title, desc }: { title: string; desc: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
+      whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+      transition={{ duration: 0.5 }}
+      className="relative rounded-2xl border border-primary/15 p-8 bg-gradient-to-br from-primary/5 via-background to-accent/5 backdrop-blur hover:shadow-lg transition-all group overflow-hidden"
     >
-      <h3 className="font-bold mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{desc}</p>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative">
+        <h3 className="font-bold text-xl mb-3">{title}</h3>
+        <p className="text-base text-foreground/65 leading-relaxed">{desc}</p>
+      </div>
     </motion.div>
   );
 }
