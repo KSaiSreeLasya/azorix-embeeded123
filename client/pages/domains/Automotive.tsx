@@ -299,26 +299,34 @@ function ProtocolCard({
   );
 }
 
-function SoftwareCard({ title, items }: { title: string; items: string[] }) {
+function SoftwareCard({
+  title,
+  items,
+  index = 0,
+}: {
+  title: string;
+  items: string[];
+  index?: number;
+}) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.4 }}
-      className="rounded-lg border p-6 bg-card/60 backdrop-blur hover:shadow-md transition-all"
-    >
+    <AnimatedCard variant="hover-glow" index={index}>
       <h3 className="font-semibold text-foreground mb-4">{title}</h3>
       <ul className="space-y-2">
-        {items.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm">
+        {items.map((item, idx) => (
+          <motion.li
+            key={item}
+            className="flex items-start gap-2 text-sm"
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: idx * 0.05 }}
+          >
             <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
             <span className="text-muted-foreground">{item}</span>
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </motion.div>
+    </AnimatedCard>
   );
 }
 
