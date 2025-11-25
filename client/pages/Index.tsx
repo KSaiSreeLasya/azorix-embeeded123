@@ -279,6 +279,7 @@ export default function Index() {
               "Low-power design",
               "User apps",
             ]}
+            index={0}
           />
           <CoECard
             emoji="🏥"
@@ -292,6 +293,7 @@ export default function Index() {
               "Sensor integration",
               "Data security",
             ]}
+            index={1}
           />
           <CoECard
             emoji="🚗"
@@ -305,6 +307,7 @@ export default function Index() {
               "Telematics",
               "Real-time control",
             ]}
+            index={2}
           />
           <CoECard
             emoji="⚙️"
@@ -313,6 +316,7 @@ export default function Index() {
             highlight="Chip Design"
             desc="Enabling next-generation processors"
             topics={["Bootloaders", "Drivers", "Performance", "Validation"]}
+            index={3}
           />
         </div>
       </Section>
