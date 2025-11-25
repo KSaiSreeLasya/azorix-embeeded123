@@ -285,23 +285,30 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className="flex items-center gap-3"
+            className="flex items-start gap-3 p-4 rounded-lg border border-primary/15 bg-primary/5"
           >
             <motion.input
               id="agree"
               type="checkbox"
-              className="h-5 w-5 rounded border-primary/20 accent-primary cursor-pointer"
+              className="h-5 w-5 rounded border border-primary/30 accent-primary cursor-pointer mt-0.5 flex-shrink-0"
               checked={agree}
               onChange={(e) => setAgree(e.target.checked)}
               disabled={isLoading}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             />
             <label
               htmlFor="agree"
-              className="text-sm text-muted-foreground cursor-pointer"
+              className="text-sm text-foreground/75 cursor-pointer font-medium leading-relaxed"
             >
-              I agree to be contacted and accept the privacy notice.
+              I agree to be contacted about my project and accept the{" "}
+              <Link
+                to="/privacy"
+                className="text-primary hover:underline font-semibold transition-colors"
+              >
+                privacy notice
+              </Link>
+              .
             </label>
           </motion.div>
 
