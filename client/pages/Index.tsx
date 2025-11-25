@@ -172,21 +172,25 @@ export default function Index() {
             icon={<Rocket className="h-5 w-5" />}
             title="Full-Stack Expertise"
             desc="Hardware design, firmware, software, testing, and support"
+            index={0}
           />
           <OverviewCard
             icon={<Shield className="h-5 w-5" />}
             title="Reliable Execution"
             desc="Quality and technology-focused with proven track record"
+            index={1}
           />
           <OverviewCard
             icon={<Globe className="h-5 w-5" />}
             title="Global Reach"
             desc="Serving multinational companies and startups worldwide"
+            index={2}
           />
           <OverviewCard
             icon={<Zap className="h-5 w-5" />}
             title="Extended Teams"
             desc="Resource augmentation and flexible engagement models"
+            index={3}
           />
         </div>
       </Section>
