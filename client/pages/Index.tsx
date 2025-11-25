@@ -633,49 +633,49 @@ export default function Index() {
             innovators worldwide
           </motion.p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
           {[
             {
               name: "Qualcomm",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Ff84798c90742499b9c530c34302a27b3?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Febf2ef164d994b569d71f886ae6009ac?format=webp&width=800",
             },
             {
               name: "Intel",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F996e70ded31f47c0ad70d8d408240e3e?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F1fe0861a53234f258ae05b386a218919?format=webp&width=800",
             },
             {
               name: "Bosch",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F9c77ee4533c644ab8f645e74e4f5aeaf?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fd561fc3109de4576ab82554c59cbf464?format=webp&width=800",
             },
             {
               name: "Ford",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F9b867ed044cb4aa085cf221997f72ba8?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4ba3011410274053ae9c2ac7560f311a?format=webp&width=800",
             },
             {
               name: "Thermo Fisher Scientific",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Fb473361533db46029fe8b7f3fc44f72a?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fc33c02f95c7e4e5a9dafd9e8f214ac20?format=webp&width=800",
             },
             {
               name: "AMD",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Fb643fb8d25fb44678335e1d7ba418785?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2Fb04649cc615a496a856fe43a6b580976?format=webp&width=800",
             },
             {
               name: "Tech Mahindra",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2Fb7a7a132b1ad476a9b2f284c78b16c73?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F4a8685ebce2c4f1784f5b8bb8245e7ce?format=webp&width=800",
             },
             {
               name: "OnePlus",
-              logo: "https://cdn.builder.io/api/v1/image/assets%2F94c98e5ba7184650a99abe5e5bc2b664%2F59a2e39f5e6a4c40a41d63ccc182a06c?format=webp&width=800",
+              logo: "https://cdn.builder.io/api/v1/image/assets%2Fd7c7391d30904ea7881376e6ef9502a6%2F0e0f616b739c44a594f103a1b958f321?format=webp&width=800",
             },
-          ].map((client) => (
+          ].map((client, idx) => (
             <motion.div
               key={client.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, boxShadow: "0 24px 48px rgba(0,0,0,0.15)" }}
-              transition={{ duration: 0.5 }}
-              className="relative rounded-2xl border border-primary/20 p-8 flex flex-col items-center justify-center min-h-48 bg-gradient-to-br from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all duration-300 group overflow-hidden"
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
+              className="relative rounded-2xl border border-primary/20 p-6 flex flex-col items-center justify-center min-h-40 min-w-40 bg-gradient-to-br from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all duration-300 group overflow-hidden flex-shrink-0"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex items-center justify-center h-full w-full">
@@ -684,7 +684,7 @@ export default function Index() {
                   alt={client.name}
                   loading="lazy"
                   decoding="async"
-                  className="max-h-20 max-w-[90%] object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0"
+                  className="max-h-16 max-w-[85%] object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0"
                 />
               </div>
             </motion.div>
