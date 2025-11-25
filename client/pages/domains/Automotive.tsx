@@ -33,21 +33,25 @@ export default function Automotive() {
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <CapabilityCard
+            index={0}
             icon={<Zap className="h-6 w-6" />}
             title="BSP & Bootloaders"
             desc="Board support packages, bootloaders, and system initialization"
           />
           <CapabilityCard
+            index={1}
             icon={<Radio className="h-6 w-6" />}
             title="Communication Protocols"
             desc="CAN, CAN FD, UDS, J1939, Autosar, LIN, FlexRay"
           />
           <CapabilityCard
+            index={2}
             icon={<Shield className="h-6 w-6" />}
             title="Safety & Compliance"
             desc="MISRA C/C++, ISO 26262, functional safety, diagnostics"
           />
           <CapabilityCard
+            index={3}
             icon={<Car className="h-6 w-6" />}
             title="Connectivity"
             desc="Telematics, V2X, cellular (LTE/5G), WiFi, Bluetooth"
