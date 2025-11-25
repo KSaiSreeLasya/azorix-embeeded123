@@ -411,13 +411,17 @@ export default function Projects() {
                     Technologies Used
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedProjectData.technologies.map((tech) => (
-                      <span
+                    {selectedProjectData.technologies.map((tech, idx) => (
+                      <motion.span
                         key={tech}
-                        className="px-3 py-1.5 rounded-full border bg-gradient-to-r from-primary/15 to-accent/15 text-foreground text-xs font-semibold hover:border-primary/50 transition-colors"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        whileHover={{ scale: 1.05, boxShadow: "0 4px 12px rgba(var(--primary-rgb), 0.2)" }}
+                        transition={{ duration: 0.3, delay: idx * 0.05 }}
+                        className="px-3 py-1.5 rounded-full border border-primary/30 bg-gradient-to-r from-primary/15 to-accent/15 text-foreground text-xs font-semibold hover:border-primary/50 transition-colors"
                       >
                         {tech}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </div>
