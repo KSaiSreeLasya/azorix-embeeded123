@@ -569,7 +569,7 @@ export default function Projects() {
                     alt={logo.name}
                     loading="lazy"
                     decoding="async"
-                    className="max-h-16 max-w-[85%] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                    className={`${logo.size} max-w-[85%] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300`}
                   />
                 </div>
               </div>
