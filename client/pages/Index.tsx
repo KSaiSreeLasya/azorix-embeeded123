@@ -751,6 +751,7 @@ function CoECard({
   highlight,
   desc,
   topics,
+  index = 0,
 }: {
   emoji: string;
   icon: React.ReactNode;
@@ -758,21 +759,27 @@ function CoECard({
   highlight: string;
   desc: string;
   topics: string[];
+  index?: number;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -6, boxShadow: "0 24px 48px rgba(0,0,0,0.12)" }}
-      transition={{ duration: 0.5 }}
-      className="relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-8 shadow-lg hover:shadow-xl transition-all group overflow-hidden"
+      whileHover={{ y: -8, boxShadow: "0 32px 64px rgba(0,0,0,0.15)" }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="relative rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-accent/5 p-8 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all group overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <motion.div className="absolute -top-10 -right-10 h-40 w-40 bg-gradient-to-bl from-accent/20 via-transparent to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative">
-        <div className="text-5xl mb-4 inline-block transform group-hover:scale-110 transition-transform duration-300">
+        <motion.div
+          className="text-5xl mb-4 inline-block"
+          whileHover={{ scale: 1.2, rotate: 10 }}
+          transition={{ duration: 0.3 }}
+        >
           {emoji}
-        </div>
+        </motion.div>
         <h3 className="font-bold text-xl mb-2">{title}</h3>
         <p className="text-sm font-semibold text-primary/80 mb-3 uppercase tracking-wide">
           {highlight}
@@ -781,13 +788,18 @@ function CoECard({
           {desc}
         </p>
         <div className="flex flex-wrap gap-2">
-          {topics.map((topic) => (
-            <span
+          {topics.map((topic, idx) => (
+            <motion.span
               key={topic}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
+              whileHover={{ scale: 1.05, backgroundColor: "rgba(var(--primary-rgb), 0.2)" }}
               className="text-xs px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 text-foreground/75 font-medium border border-primary/20 hover:border-primary/40 transition-colors"
             >
               {topic}
-            </span>
+            </motion.span>
           ))}
         </div>
       </div>
