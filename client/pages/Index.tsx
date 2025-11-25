@@ -273,57 +273,65 @@ export default function Index() {
           </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <CoECard
-            emoji="📱"
-            icon={<Smartphone className="h-6 w-6" />}
-            title="Handheld & IoT"
-            highlight="Smart Devices"
-            desc="Building smart devices - phones, watches, home devices"
-            topics={[
-              "Android",
-              "Connectivity",
-              "Low-power design",
-              "User apps",
-            ]}
-            index={0}
-          />
-          <CoECard
-            emoji="🏥"
-            icon={<Stethoscope className="h-6 w-6" />}
-            title="Medical Devices"
-            highlight="Healthcare"
-            desc="Medical-grade devices that save lives"
-            topics={[
-              "Regulatory compliance",
-              "Patient safety",
-              "Sensor integration",
-              "Data security",
-            ]}
-            index={1}
-          />
-          <CoECard
-            emoji="🚗"
-            icon={<Car className="h-6 w-6" />}
-            title="Automotive"
-            highlight="Connected Vehicles"
-            desc="Making cars smarter and safer"
-            topics={[
-              "Vehicle networks",
-              "Safety systems",
-              "Telematics",
-              "Real-time control",
-            ]}
-            index={2}
-          />
-          <CoECard
-            emoji="⚙️"
-            icon={<Cpu className="h-6 w-6" />}
-            title="Silicon & SoC"
-            highlight="Chip Design"
-            desc="Enabling next-generation processors"
-            topics={["Bootloaders", "Drivers", "Performance", "Validation"]}
-            index={3}
-          />
+          <Link to="/teams/handheld-iot">
+            <CoECard
+              emoji="📱"
+              icon={<Smartphone className="h-6 w-6" />}
+              title="Handheld & IoT"
+              highlight="Smart Devices"
+              desc="Building smart devices - phones, watches, home devices"
+              topics={[
+                "Android",
+                "Connectivity",
+                "Low-power design",
+                "User apps",
+              ]}
+              index={0}
+            />
+          </Link>
+          <Link to="/teams/medical">
+            <CoECard
+              emoji="🏥"
+              icon={<Stethoscope className="h-6 w-6" />}
+              title="Medical Devices"
+              highlight="Healthcare"
+              desc="Medical-grade devices that save lives"
+              topics={[
+                "Regulatory compliance",
+                "Patient safety",
+                "Sensor integration",
+                "Data security",
+              ]}
+              index={1}
+            />
+          </Link>
+          <Link to="/teams/automotive">
+            <CoECard
+              emoji="🚗"
+              icon={<Car className="h-6 w-6" />}
+              title="Automotive"
+              highlight="Connected Vehicles"
+              desc="Making cars smarter and safer"
+              topics={[
+                "Vehicle networks",
+                "Safety systems",
+                "Telematics",
+                "Real-time control",
+              ]}
+              index={2}
+            />
+          </Link>
+          <Link to="/teams/silicon">
+            <CoECard
+              emoji="⚙️"
+              icon={<Cpu className="h-6 w-6" />}
+              title="Silicon & SoC"
+              highlight="Chip Design"
+              desc="Enabling next-generation processors"
+              topics={["Bootloaders", "Drivers", "Performance", "Validation"]}
+              index={3}
+            />
+          </Link>
         </div>
       </Section>
 
@@ -351,62 +359,70 @@ export default function Index() {
           </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <ExpertiseCard
-            icon="🛠️"
-            title="Product"
-            subtitle="Hardware Design"
-            desc="We design the physical hardware - circuits, PCBs, and all components that make devices work"
-            items={[
-              "Requirements analysis",
-              "System design & review",
-              "Schematic & PCB design",
-              "Component selection",
-              "Quality assurance",
-            ]}
-            index={0}
-          />
-          <ExpertiseCard
-            icon="💻"
-            title="Software"
-            subtitle="Device Intelligence"
-            desc="We write the code that makes devices smart - from firmware to apps"
-            items={[
-              "Bootloaders and drivers",
-              "Operating systems",
-              "Communication protocols",
-              "User interfaces",
-              "Cloud integration",
-            ]}
-            index={1}
-          />
-          <ExpertiseCard
-            icon="✓"
-            title="Testing"
-            subtitle="Quality Verification"
-            desc="We make sure everything works perfectly - testing and quality assurance"
-            items={[
-              "Automated testing",
-              "Stability testing",
-              "Performance validation",
-              "Reliability testing",
-              "Compliance verification",
-            ]}
-            index={2}
-          />
-          <ExpertiseCard
-            icon="🤝"
-            title="Support"
-            subtitle="Expert Guidance"
-            desc="We're here to help - training, resources, and ongoing support"
-            items={[
-              "Team augmentation",
-              "Technical training",
-              "Troubleshooting",
-              "Escalation support",
-              "Knowledge transfer",
-            ]}
-            index={3}
-          />
+          <Link to="/pillars/product">
+            <ExpertiseCard
+              icon="🛠️"
+              title="Product"
+              subtitle="Hardware Design"
+              desc="We design the physical hardware - circuits, PCBs, and all components that make devices work"
+              items={[
+                "Requirements analysis",
+                "System design & review",
+                "Schematic & PCB design",
+                "Component selection",
+                "Quality assurance",
+              ]}
+              index={0}
+            />
+          </Link>
+          <Link to="/pillars/software">
+            <ExpertiseCard
+              icon="💻"
+              title="Software"
+              subtitle="Device Intelligence"
+              desc="We write the code that makes devices smart - from firmware to apps"
+              items={[
+                "Bootloaders and drivers",
+                "Operating systems",
+                "Communication protocols",
+                "User interfaces",
+                "Cloud integration",
+              ]}
+              index={1}
+            />
+          </Link>
+          <Link to="/pillars/testing">
+            <ExpertiseCard
+              icon="✓"
+              title="Testing"
+              subtitle="Quality Verification"
+              desc="We make sure everything works perfectly - testing and quality assurance"
+              items={[
+                "Automated testing",
+                "Stability testing",
+                "Performance validation",
+                "Reliability testing",
+                "Compliance verification",
+              ]}
+              index={2}
+            />
+          </Link>
+          <Link to="/pillars/support">
+            <ExpertiseCard
+              icon="🤝"
+              title="Support"
+              subtitle="Expert Guidance"
+              desc="We're here to help - training, resources, and ongoing support"
+              items={[
+                "Team augmentation",
+                "Technical training",
+                "Troubleshooting",
+                "Escalation support",
+                "Knowledge transfer",
+              ]}
+              index={3}
+            />
+          </Link>
         </div>
       </Section>
 
@@ -431,18 +447,24 @@ export default function Index() {
           Flexible partnerships tailored to your project needs.
         </motion.p>
         <div className="grid gap-6 md:grid-cols-3">
-          <EngagementCard
-            title="Project / SoW"
-            desc="Complete project delivery with defined scope of work and timeline"
-          />
-          <EngagementCard
-            title="Resource Augmentation"
-            desc="Scale your team with skilled engineers working as extended team"
-          />
-          <EngagementCard
-            title="Build Operate Transfer"
-            desc="Build capability, operate services, then transfer to your team"
-          />
+          <Link to="/engagement/project-sow">
+            <EngagementCard
+              title="Project / SoW"
+              desc="Complete project delivery with defined scope of work and timeline"
+            />
+          </Link>
+          <Link to="/engagement/resource-augmentation">
+            <EngagementCard
+              title="Resource Augmentation"
+              desc="Scale your team with skilled engineers working as extended team"
+            />
+          </Link>
+          <Link to="/engagement/bot">
+            <EngagementCard
+              title="Build Operate Transfer"
+              desc="Build capability, operate services, then transfer to your team"
+            />
+          </Link>
         </div>
       </Section>
 
@@ -532,49 +554,59 @@ export default function Index() {
           </motion.p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-          <IoTAppCard
-            title="🏭 Industrial IoT"
-            desc="Factories that monitor themselves - machines that predict problems before they happen"
-            icon={<Zap className="h-6 w-6" />}
-            examples={[
-              "Predictive maintenance",
-              "Production optimization",
-              "Equipment monitoring",
-            ]}
-            index={0}
-          />
-          <IoTAppCard
-            title="🏥 Medical IoT"
-            desc="Devices that care for your health - from monitoring your heart to tracking fitness"
-            icon={<Stethoscope className="h-6 w-6" />}
-            examples={[
-              "Health monitoring",
-              "Patient alerts",
-              "Remote diagnosis",
-            ]}
-            index={1}
-          />
-          <IoTAppCard
-            title="🏙️ Smart City"
-            desc="Cities that work efficiently - traffic flows better, utilities use less energy"
-            icon={<Globe className="h-6 w-6" />}
-            examples={["Traffic management", "Energy saving", "Public safety"]}
-            index={2}
-          />
-          <IoTAppCard
-            title="🚗 Automotive IoT"
-            desc="Cars that are smarter and safer - connected and aware of their surroundings"
-            icon={<Car className="h-6 w-6" />}
-            examples={["Navigation", "Safety features", "Remote control"]}
-            index={3}
-          />
-          <IoTAppCard
-            title="📱 Consumer IoT"
-            desc="Home devices that listen and respond - making life simpler and more connected"
-            icon={<Smartphone className="h-6 w-6" />}
-            examples={["Smart home", "Wearables", "Personal devices"]}
-            index={4}
-          />
+          <Link to="/iot/industrial">
+            <IoTAppCard
+              title="🏭 Industrial IoT"
+              desc="Factories that monitor themselves - machines that predict problems before they happen"
+              icon={<Zap className="h-6 w-6" />}
+              examples={[
+                "Predictive maintenance",
+                "Production optimization",
+                "Equipment monitoring",
+              ]}
+              index={0}
+            />
+          </Link>
+          <Link to="/iot/medical">
+            <IoTAppCard
+              title="🏥 Medical IoT"
+              desc="Devices that care for your health - from monitoring your heart to tracking fitness"
+              icon={<Stethoscope className="h-6 w-6" />}
+              examples={[
+                "Health monitoring",
+                "Patient alerts",
+                "Remote diagnosis",
+              ]}
+              index={1}
+            />
+          </Link>
+          <Link to="/iot/smart-city">
+            <IoTAppCard
+              title="🏙️ Smart City"
+              desc="Cities that work efficiently - traffic flows better, utilities use less energy"
+              icon={<Globe className="h-6 w-6" />}
+              examples={["Traffic management", "Energy saving", "Public safety"]}
+              index={2}
+            />
+          </Link>
+          <Link to="/iot/automotive">
+            <IoTAppCard
+              title="🚗 Automotive IoT"
+              desc="Cars that are smarter and safer - connected and aware of their surroundings"
+              icon={<Car className="h-6 w-6" />}
+              examples={["Navigation", "Safety features", "Remote control"]}
+              index={3}
+            />
+          </Link>
+          <Link to="/iot/consumer">
+            <IoTAppCard
+              title="📱 Consumer IoT"
+              desc="Home devices that listen and respond - making life simpler and more connected"
+              icon={<Smartphone className="h-6 w-6" />}
+              examples={["Smart home", "Wearables", "Personal devices"]}
+              index={4}
+            />
+          </Link>
         </div>
       </Section>
 
